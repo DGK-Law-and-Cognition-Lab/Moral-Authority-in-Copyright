@@ -1,0 +1,217 @@
+---
+title: "Rating analyses (registered plan, Sections 5-6)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+params:
+  mode: "simulated"
+---
+
+<!--
+Render from the repository root:
+  Rscript -e 'rmarkdown::render("Analysis/02_ratings_analysis.Rmd", params = list(mode = "simulated"), output_dir = "Analysis/output/simulated")'
+The real-data run uses mode = "real" and output_dir = "Analysis/output/real".
+The plan requires this file to be committed, and run on simulated data, before
+it is run once on the real data.
+-->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+root <- normalizePath(file.path(knitr::opts_knit$get("root.dir") %||% getwd(), ".."))
+if (!file.exists(file.path(root, "Analysis", "R", "config.R"))) root <- normalizePath(".")
+stopifnot(file.exists(file.path(root, "Analysis", "R", "config.R")))
+for (f in c("config.R", "prepare.R", "models.R")) source(file.path(root, "Analysis", "R", f))
+stopifnot(params$mode %in% c("simulated", "real"))
+set.seed(SEED)
+out_dir <- file.path(root, "Analysis", "output", params$mode, "ratings")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+save_tab <- function(x, name) { write.csv(x, file.path(out_dir, paste0(name, ".csv")), row.names = FALSE, na = ""); invisible(x) }
+show <- function(x, digits = 3) knitr::kable(x, digits = digits, row.names = FALSE)
+```
+
+**Data mode: `r params$mode`.** `r if (params$mode == "simulated") "These results come from SYNTHETIC data with planted effects. They test the code and say nothing about the studies." else "These results come from the real, de-identified data."`
+
+```{r load}
+all1 <- prepare_study(1, params$mode, root)
+all2 <- prepare_study(2, params$mode, root)
+d1 <- analysis_sample(all1)
+d2 <- analysis_sample(all2)
+# In real mode the samples must equal the registered sizes (Section 5); stop otherwise.
+if (params$mode == "real" && (nrow(d1) != 228 || nrow(d2) != 261 || sum(d2$in_2025_interim == 0) != 164))
+  stop("Analysis samples differ from the registered sizes (228, 261, 164 unseen): ",
+       nrow(d1), ", ", nrow(d2), ", ", sum(d2$in_2025_interim == 0))
+```
+
+# Participant flow
+
+Counts at each inclusion step (Section 5), per cell.
+
+```{r flow}
+flow <- rbind(inclusion_counts(all1, 1), inclusion_counts(all2, 2))
+show(save_tab(flow, "participant_flow"))
+# In real mode the whole flow must equal the registered table (Section 5).
+if (params$mode == "real") {
+  reg <- list(`1` = c(assigned = 269, finished = 264, passed = 246, first = 246, serious = 228),
+              `2` = c(assigned = 502, finished = 440, passed = 403, first = 267, serious = 261))
+  for (s in c("1", "2")) {
+    got <- unlist(flow[flow$study == as.integer(s) & flow$cell == "TOTAL", names(reg[[s]])])
+    if (!identical(as.numeric(got), as.numeric(reg[[s]])))
+      stop("Study ", s, " flow differs from the registered table: ", paste(names(got), got, collapse = ", "))
+  }
+}
+```
+
+Whether exclusion rates differ by condition (Section 6, Attrition).
+
+```{r attrition}
+show(save_tab(rbind(attrition_tests(all1, 1), attrition_tests(all2, 2)), "attrition_tests"))
+```
+
+`r if (params$mode == "real") { if (sum(all1$included) != 228 || sum(all2$included) != 261 || sum(d2$in_2025_interim == 0) != 164) "**STOP: the analysis samples do not match the registered sizes (228, 261, 164 unseen).**" else "The analysis samples match the registered sizes: 228 (Study 1), 261 (Study 2), 164 of them unseen." } else ""`
+
+# Composites
+
+Cronbach's alpha, descriptive only (Section 5).
+
+```{r alpha}
+show(save_tab(rbind(composite_alpha(d1, 1), composite_alpha(d2, 2)), "composite_alpha"))
+```
+
+# Confirmatory tests (Study 2)
+
+C1-C5, Holm-adjusted together. C4 enters the family with its equivalence (TOST) p value; its two-sided test of a difference is reported alongside. A test is supported if its Holm-adjusted p < .05, its sign matches the prediction where one is made, its estimate has the same sign in the unseen responses, and (C5 only) the ordinal model agrees in sign and has p < .05.
+
+```{r confirmatory}
+conf <- run_confirmatory(d2)
+save_tab(conf, "confirmatory_C1_C5")
+save_tab(attr(conf, "unseen_table"), "confirmatory_C1_C5_unseen_subset")
+show(conf[, c("test", "outcome", "label", "n", "estimate", "ci_low", "ci_high", "d", "p_two_sided",
+              "p_family", "p_holm", "sign_matches_prediction", "n_unseen", "estimate_unseen",
+              "same_sign_unseen", "ordinal_agrees", "verdict")])
+```
+
+Equivalence detail for C4 (bound ±`r EQUIV_BOUND` points on the 1-5 scale):
+
+```{r c4}
+show(conf[conf$test == "C4", c("estimate", "ci90_low", "ci90_high", "ci90_within_bounds", "holm_alpha_c4",
+                               "ci_holm_low", "ci_holm_high", "tost_p", "p_holm", "p_two_sided")])
+```
+
+# Results tables (secondary)
+
+Every term for every rating outcome. `p_holm_primary_family`: Holm across all terms and the four primary outcomes (registered). `p_holm_secondary_family`: the same adjustment across all terms and the secondary outcomes (added for completeness; not named in the plan). Interactions are claimed only if the linear and ordinal models agree in sign and both have p < .05.
+
+## Study 2
+
+```{r study2}
+tab2 <- all_terms(d2, 2)
+save_tab(tab2, "study2_all_terms")
+show(tab2[, c("outcome", "label", "estimate", "ci_low", "ci_high", "d", "eta2_partial", "p",
+              "p_holm_primary_family", "p_holm_secondary_family", "ord_p", "interaction_claim")])
+```
+
+## Study 1
+
+```{r study1}
+tab1 <- all_terms(d1, 1)
+save_tab(tab1, "study1_all_terms")
+show(tab1[, c("outcome", "label", "estimate", "ci_low", "ci_high", "d", "eta2_partial", "p",
+              "p_holm_primary_family", "p_holm_secondary_family", "ord_p", "interaction_claim")])
+```
+
+## Cell means and SDs
+
+```{r cellmeans}
+outs <- c(PRIMARY, SECONDARY)
+cm <- rbind(cell_means(d1, 1, outs), cell_means(d2, 2, outs))
+save_tab(cm, "cell_means")
+save_tab(rbind(factor_means(d1, 1, outs), factor_means(d2, 2, outs)), "factor_means")
+show(cm[cm$outcome %in% PRIMARY, ])
+```
+
+# Pooled fame effects (secondary)
+
+Fixed-effect meta-analysis of each study's artist-fame and victim-fame estimates, with Q.
+
+```{r pooled}
+show(save_tab(pooled_fame(tab1, tab2), "pooled_fame_effects"))
+```
+
+# Items asked after the outcomes
+
+Perceived status, power, and resources by condition. These are post-outcome perceptions, not manipulation checks; no mediation analysis is run.
+
+```{r perceptions}
+perc <- rbind(factor_means(d1, 1, PERCEPTION_ITEMS), factor_means(d2, 2, PERCEPTION_ITEMS))
+save_tab(perc, "perceptions_by_condition")
+perc_models <- rbind(do.call(rbind, lapply(PERCEPTION_ITEMS, function(o) coef_table(fit_lm(d1, o, 1), 1, o))),
+                     do.call(rbind, lapply(PERCEPTION_ITEMS, function(o) coef_table(fit_lm(d2, o, 2), 2, o))))
+save_tab(perc_models, "perceptions_models_descriptive")
+show(perc)
+```
+
+WorkTransform (Study 2) is a comprehension item with a reread loop. Share answering correctly for the participant's condition:
+
+```{r worktransform}
+show(save_tab(worktransform_table(d2), "worktransform_by_cell"))
+```
+
+# Checks on the main results (supplement)
+
+Each check reruns C1-C5. A check *changes* a result if it flips the sign of the estimate or moves the Holm-adjusted p across .05. The "all finished first responses" check reads the plan literally: it ignores the comprehension checks and also keeps participants who said they were not serious. Under the ordinal and logistic checks, tests without such a model (C2 on the Harm composite; the C4 equivalence test) keep their linear result.
+
+```{r robustness}
+rob <- run_robustness(all2, conf)
+save_tab(rob, "robustness_C1_C5")
+show(rob)
+```
+
+Full tables under the sample variants:
+
+```{r robustness_tables}
+for (s in 1:2) {
+  dall <- if (s == 1) all1 else all2
+  rs <- robustness_samples(dall)
+  for (nm in names(rs)) save_tab(all_terms(rs[[nm]], s), sprintf("study%d_all_terms__%s", s, nm))
+}
+```
+
+# Exploratory: moderators
+
+Whether art training or copyright familiarity changes the fame or transformation effects. Exploratory; `q_bh` is the Benjamini-Hochberg adjustment across every moderator test in the table.
+
+```{r moderators}
+mod <- rbind(moderators(d1, 1), moderators(d2, 2))
+mod$q_bh <- p.adjust(mod$p, "BH")
+show(save_tab(mod, "exploratory_moderators"))
+```
+
+```{r text_input}
+# Input for the text pipeline (Section 7). Development set: all of Study 1 and the
+# Study 2 responses in the 2025 interim file that passed the checks. Test set: the
+# analyzed Study 2 responses never seen. Responses under three words are flagged.
+wc <- function(x) ifelse(is.na(x), 0L, lengths(regmatches(x, gregexpr("[[:alnum:]']+", x))))
+keep_cols <- c("pid", "study", "a", "v", "t", "artist", "victim", "transform", "cell",
+               "Explain_Ruling", "AllowedReason", "Jury", "CostReason", "ReduceMarket", "Moral", "Harm", "Payment")
+t1 <- d1; t1$transform <- NA; t1$text_set <- "dev"; t1$analyzed <- TRUE
+t2dev <- all2[all2$passed & !is.na(all2$in_2025_interim) & all2$in_2025_interim == 1, ]
+t2dev$text_set <- "dev"; t2dev$analyzed <- t2dev$included
+t2test <- d2[d2$in_2025_interim == 0, ]; t2test$text_set <- "test"; t2test$analyzed <- TRUE
+as_plain <- function(x) { x <- x[, c(keep_cols, "text_set", "analyzed")]
+  for (f in c("artist", "victim", "transform")) x[[f]] <- as.character(x[[f]]); x }
+ti <- rbind(as_plain(t1), as_plain(t2dev), as_plain(t2test))
+stopifnot(all(ti$artist %in% c("famous", "unknown")), all(ti$victim %in% c("famous", "unknown")),
+          all(is.na(ti$transform[ti$study == 1])), all(ti$transform[ti$study == 2] %in% c("high", "low")))
+ti$n_words <- wc(ti$Explain_Ruling)
+ti$text_ok <- ti$n_words >= 3
+write.csv(ti, file.path(root, "Analysis", "output", params$mode, "text_input.csv"), row.names = FALSE, na = "")
+```
+
+# Session
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_dir, "sessionInfo.txt"))
+cat("Text-pipeline input written:", nrow(ti), "rows (", sum(ti$text_set == "dev"), "development,",
+    sum(ti$text_set == "test"), "test;", sum(!ti$text_ok), "under three words).\n")
+```

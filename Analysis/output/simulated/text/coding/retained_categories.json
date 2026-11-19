@@ -1,0 +1,19 @@
+{
+  "retained": [
+    "permission",
+    "transformation",
+    "nature_of_work",
+    "amount_used",
+    "market_effect",
+    "profit",
+    "credit",
+    "nonmonetary_harm",
+    "fame_status_power",
+    "fairness_moral",
+    "law_rules",
+    "remedy"
+  ],
+  "dev_gate_applied": false,
+  "test_gate_applied": false,
+  "note": "SIMULATED: no human codes; all reason codes marked retained for testing"
+}

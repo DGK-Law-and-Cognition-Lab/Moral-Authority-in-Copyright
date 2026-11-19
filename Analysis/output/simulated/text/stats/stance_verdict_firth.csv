@@ -1,0 +1,8 @@
+"sample","code","term","n","prevalence","estimate","ci_low","ci_high","p","note"
+"study2_all","stance agrees with Jury","a",309,0.870550161812298,0.352679296535249,-0.318080256918339,1.03056589452814,0.301266330907234,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","v",309,0.870550161812298,-0.140052437885315,-0.814970086887685,0.533750208842175,0.681698931967675,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","t",309,0.870550161812298,-0.101571917317255,-0.770837501714377,0.577714135328494,0.766369818290819,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","a:v",309,0.870550161812298,0.621930888967982,-0.702199360344457,1.99346701867084,0.359206552363001,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","a:t",309,0.870550161812298,0.816572930149969,-0.530466495753389,2.16696983846096,0.232709891554828,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","v:t",309,0.870550161812298,0.169945765224917,-1.18509929120829,1.51222202218027,0.803593888882971,"Firth logistic; estimate = log-odds difference (codes as in config.R)"
+"study2_all","stance agrees with Jury","a:v:t",309,0.870550161812298,0.886966660581084,-1.77321849919777,3.61958143957093,0.514514662380712,"Firth logistic; estimate = log-odds difference (codes as in config.R)"

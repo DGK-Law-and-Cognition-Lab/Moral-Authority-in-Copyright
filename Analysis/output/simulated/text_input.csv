@@ -1,0 +1,575 @@
+"pid","study","a","v","t","artist","victim","transform","cell","Explain_Ruling","AllowedReason","Jury","CostReason","ReduceMarket","Moral","Harm","Payment","text_set","analyzed","n_words","text_ok"
+"SIM1_0001",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,4,2,2,4,3.25,5,"dev",TRUE,7,TRUE
+"SIM1_0002",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Art builds on other art all the time.",4,3,4,5,4.25,3.5,4,"dev",TRUE,8,TRUE
+"SIM1_0003",1,0.5,-0.5,,"famous","famous",,"famous/famous","Art builds on other art all the time.",2,2,2,1,3,1.5,2,"dev",TRUE,8,TRUE
+"SIM1_0004",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. They should share the profits.",5,5,4,5,3.25,3.25,5,"dev",TRUE,12,TRUE
+"SIM1_0005",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",4,5,3,2,4,3.25,4,"dev",TRUE,7,TRUE
+"SIM1_0006",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong.",5,5,4,6,4.5,2,5,"dev",TRUE,7,TRUE
+"SIM1_0007",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. They should share the profits.",5,5,5,3,5,3.75,3,"dev",TRUE,12,TRUE
+"SIM1_0008",1,0.5,-0.5,,"famous","famous",,"famous/famous","Art builds on other art all the time. They should share the profits.",3,2,3,1,3.25,2.5,4,"dev",TRUE,13,TRUE
+"SIM1_0009",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission.",5,5,5,6,3.75,3.25,2,"dev",TRUE,7,TRUE
+"SIM1_0010",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",5,4,2,5,3.75,2.25,5,"dev",TRUE,7,TRUE
+"SIM1_0011",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. He should give credit.",5,4,3,5,2.5,2,2,"dev",TRUE,21,TRUE
+"SIM1_0012",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong.",3,4,4,3,4,2.75,5,"dev",TRUE,7,TRUE
+"SIM1_0013",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong.",5,5,4,2,4.25,3.25,5,"dev",TRUE,7,TRUE
+"SIM1_0014",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Rivera is a small artist and could lose income.",5,5,4,6,4.25,4.25,5,"dev",TRUE,16,TRUE
+"SIM1_0015",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should pay Rivera.",3,5,3,2,3.5,1.5,4,"dev",TRUE,13,TRUE
+"SIM1_0016",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked.",1,5,3,6,3,1.5,5,"dev",TRUE,9,TRUE
+"SIM1_0017",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,5,1,3,1.75,2,"dev",TRUE,7,TRUE
+"SIM1_0018",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this.",4,5,5,4,5,3.5,5,"dev",TRUE,15,TRUE
+"SIM1_0019",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","The new work is transformative enough to count as fair use.",5,2,5,4,3.5,3.25,5,"dev",TRUE,11,TRUE
+"SIM1_0020",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Art builds on other art all the time.",2,3,5,2,2,1.25,2,"dev",TRUE,8,TRUE
+"SIM1_0021",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. Martinez is famous and should know better.",3,4,4,2,2.5,3.5,4,"dev",TRUE,16,TRUE
+"SIM1_0022",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",5,5,4,1,3.5,1,5,"dev",TRUE,17,TRUE
+"SIM1_0023",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Martinez is famous and should know better. They should share the profits.",5,5,4,6,4.25,3.75,5,"dev",TRUE,19,TRUE
+"SIM1_0024",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",5,5,5,3,4.75,3.5,5,"dev",TRUE,7,TRUE
+"SIM1_0025",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. He should pay Rivera.",5,3,5,2,3.5,1.75,3,"dev",TRUE,15,TRUE
+"SIM1_0026",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked.",5,4,4,6,4.25,4.5,5,"dev",TRUE,9,TRUE
+"SIM1_0027",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. They should share the profits.",5,5,5,6,4.5,4.75,5,"dev",TRUE,20,TRUE
+"SIM1_0028",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. Martinez is famous and should know better.",5,5,5,3,4.75,4,1,"dev",TRUE,14,TRUE
+"SIM1_0030",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Martinez is famous and should know better. He should give credit.",4,5,2,3,3.75,2.25,5,"dev",TRUE,18,TRUE
+"SIM1_0031",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this.",4,4,4,2,2.75,2.75,3,"dev",TRUE,15,TRUE
+"SIM1_0032",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. Martinez is famous and should know better.",5,5,5,6,4.75,3.5,5,"dev",TRUE,14,TRUE
+"SIM1_0033",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should give credit.",3,5,5,2,4.25,2.75,5,"dev",TRUE,13,TRUE
+"SIM1_0037",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. He should pay Rivera.",4,5,4,5,4.75,4.25,5,"dev",TRUE,20,TRUE
+"SIM1_0038",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. He should pay Rivera.",5,4,5,5,3.75,1.75,3,"dev",TRUE,21,TRUE
+"SIM1_0040",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,5,5,2,4.5,3.75,4,"dev",TRUE,13,TRUE
+"SIM1_0041",1,0.5,-0.5,,"famous","famous",,"famous/famous","not fair",5,5,2,6,3.5,2.25,1,"dev",TRUE,2,FALSE
+"SIM1_0042",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. They should share the profits.",4,3,5,6,4.75,3.75,4,"dev",TRUE,16,TRUE
+"SIM1_0043",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",5,4,1,2,3,3,5,"dev",TRUE,9,TRUE
+"SIM1_0044",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",5,5,4,4,4.25,3,3,"dev",TRUE,9,TRUE
+"SIM1_0046",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. Martinez is famous and should know better.",4,5,3,1,2.75,2,4,"dev",TRUE,24,TRUE
+"SIM1_0047",1,0.5,0.5,,"famous","unknown",,"famous/unknown","no",1,4,2,6,2.75,2.75,5,"dev",TRUE,1,FALSE
+"SIM1_0048",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked.",3,5,4,2,2.5,2.75,4,"dev",TRUE,9,TRUE
+"SIM1_0049",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked. They should share the profits.",5,5,3,6,5,4.5,5,"dev",TRUE,14,TRUE
+"SIM1_0050",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should give credit.",5,5,4,5,4.5,4,5,"dev",TRUE,11,TRUE
+"SIM1_0051",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. He should give credit.",3,4,3,2,3.5,3,5,"dev",TRUE,11,TRUE
+"SIM1_0053",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong.",5,5,4,2,4.75,3.25,4,"dev",TRUE,7,TRUE
+"SIM1_0054",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use.",4,1,2,1,2,1.75,2,"dev",TRUE,11,TRUE
+"SIM1_0055",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Art builds on other art all the time. Rivera is a small artist and could lose income. He should give credit.",5,2,3,5,2.75,2.75,5,"dev",TRUE,21,TRUE
+"SIM1_0056",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Art builds on other art all the time. Rivera is a small artist and could lose income. He should give credit.",5,3,2,5,2.5,1.5,5,"dev",TRUE,21,TRUE
+"SIM1_0057",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","ok",2,5,2,3,3.75,3,3,"dev",TRUE,1,FALSE
+"SIM1_0058",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",5,5,4,5,4.25,4,5,"dev",TRUE,7,TRUE
+"SIM1_0059",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. He should give credit.",2,4,3,4,3.75,2.5,4,"dev",TRUE,11,TRUE
+"SIM1_0060",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission.",5,5,5,6,5,3,5,"dev",TRUE,7,TRUE
+"SIM1_0061",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,5,6,5,4.75,5,"dev",TRUE,7,TRUE
+"SIM1_0062",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity. He should give credit.",3,3,2,4,2.75,2.5,3,"dev",TRUE,11,TRUE
+"SIM1_0063",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked.",3,5,3,4,3.5,1.75,5,"dev",TRUE,9,TRUE
+"SIM1_0064",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. They should share the profits.",3,5,1,1,2.5,1.25,3,"dev",TRUE,12,TRUE
+"SIM1_0065",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. They should share the profits.",4,4,2,4,1.5,1.75,4,"dev",TRUE,12,TRUE
+"SIM1_0067",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong.",3,4,1,5,2.75,1.75,2,"dev",TRUE,7,TRUE
+"SIM1_0068",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,4,4,2,2.75,1.75,1,"dev",TRUE,14,TRUE
+"SIM1_0069",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. He should pay Rivera.",5,5,5,2,5,2.75,5,"dev",TRUE,20,TRUE
+"SIM1_0072",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",4,5,3,3,2,1,1,"dev",TRUE,7,TRUE
+"SIM1_0073",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Art builds on other art all the time. He should give credit.",5,3,2,4,4.25,3.25,5,"dev",TRUE,12,TRUE
+"SIM1_0074",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission.",5,4,4,1,3.75,2.5,3,"dev",TRUE,7,TRUE
+"SIM1_0075",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong.",5,4,3,4,3.25,1.75,1,"dev",TRUE,7,TRUE
+"SIM1_0076",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong. He should pay Rivera.",5,4,4,4,5,2,5,"dev",TRUE,11,TRUE
+"SIM1_0077",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. Martinez is famous and should know better.",2,5,1,3,2,1.5,3,"dev",TRUE,14,TRUE
+"SIM1_0078",1,0.5,0.5,,"famous","unknown",,"famous/unknown","The new work is transformative enough to count as fair use.",5,2,3,3,4.5,4,4,"dev",TRUE,11,TRUE
+"SIM1_0081",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","no",5,5,3,5,4.75,2.25,4,"dev",TRUE,1,FALSE
+"SIM1_0082",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,5,4,4.75,3.5,5,"dev",TRUE,7,TRUE
+"SIM1_0083",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","ok",2,5,1,2,4.75,3,4,"dev",TRUE,1,FALSE
+"SIM1_0084",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Art builds on other art all the time. Rivera is a small artist and could lose income. They should share the profits.",2,2,2,3,1,1,3,"dev",TRUE,22,TRUE
+"SIM1_0085",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. He should give credit.",5,4,3,3,3.5,2.75,5,"dev",TRUE,11,TRUE
+"SIM1_0086",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. They should share the profits.",4,5,4,1,4.5,3,5,"dev",TRUE,20,TRUE
+"SIM1_0087",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should give credit.",5,5,5,3,2.75,4,2,"dev",TRUE,11,TRUE
+"SIM1_0089",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,5,3,4,3.5,3.5,5,"dev",TRUE,13,TRUE
+"SIM1_0090",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",5,5,4,4,4.75,4.5,5,"dev",TRUE,17,TRUE
+"SIM1_0091",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",3,4,3,3,4.75,4,5,"dev",TRUE,9,TRUE
+"SIM1_0093",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this.",5,5,4,1,4.25,2.75,2,"dev",TRUE,15,TRUE
+"SIM1_0094",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. He should pay Rivera.",5,5,5,6,5,4.75,5,"dev",TRUE,11,TRUE
+"SIM1_0095",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",5,5,4,4,4.25,3.25,4,"dev",TRUE,7,TRUE
+"SIM1_0096",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this.",2,4,2,1,2.5,1,2,"dev",TRUE,15,TRUE
+"SIM1_0098",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity.",5,2,1,4,2.75,2.25,2,"dev",TRUE,7,TRUE
+"SIM1_0099",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. They should share the profits.",5,4,1,4,3.25,2,3,"dev",TRUE,12,TRUE
+"SIM1_0100",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Art builds on other art all the time. He should pay Rivera.",4,1,3,2,1.75,2,2,"dev",TRUE,12,TRUE
+"SIM1_0101",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez added enough of his own creativity. An unknown photographer is hurt more by this. They should share the profits.",4,1,2,2,2.25,1.25,4,"dev",TRUE,20,TRUE
+"SIM1_0104",1,0.5,-0.5,,"famous","famous",,"famous/famous","ok",3,4,1,1,1.5,1,1,"dev",TRUE,1,FALSE
+"SIM1_0105",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",3,4,2,1,2.25,1.5,3,"dev",TRUE,17,TRUE
+"SIM1_0106",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez added enough of his own creativity.",3,2,1,1,3,2.25,2,"dev",TRUE,7,TRUE
+"SIM1_0107",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",3,5,3,4,2,1.5,1,"dev",TRUE,7,TRUE
+"SIM1_0108",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",5,4,1,2,3,4,3,"dev",TRUE,7,TRUE
+"SIM1_0110",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. They should share the profits.",1,3,2,2,1.25,1,2,"dev",TRUE,12,TRUE
+"SIM1_0113",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked.",5,5,2,6,3.25,3.5,1,"dev",TRUE,9,TRUE
+"SIM1_0114",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Art builds on other art all the time. An unknown photographer is hurt more by this.",5,3,4,3,2.75,2.75,3,"dev",TRUE,16,TRUE
+"SIM1_0115",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",2,5,3,3,3.75,1.75,4,"dev",TRUE,7,TRUE
+"SIM1_0116",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Rivera is a small artist and could lose income.",5,5,3,6,3.25,3.75,5,"dev",TRUE,16,TRUE
+"SIM1_0117",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. Martinez is famous and should know better.",3,1,5,1,2.75,2,4,"dev",TRUE,14,TRUE
+"SIM1_0119",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked.",4,5,4,6,3.25,3.5,2,"dev",TRUE,9,TRUE
+"SIM1_0121",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong. He should pay Rivera.",5,5,5,6,5,4,5,"dev",TRUE,11,TRUE
+"SIM1_0123",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,4,5,4.5,4.25,5,"dev",TRUE,7,TRUE
+"SIM1_0124",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should pay Rivera.",1,5,4,4,4.25,2,4,"dev",TRUE,11,TRUE
+"SIM1_0125",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. He should give credit.",5,5,5,6,4.75,4.5,4,"dev",TRUE,13,TRUE
+"SIM1_0126",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this.",5,5,5,6,3.75,4,2,"dev",TRUE,15,TRUE
+"SIM1_0127",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. He should give credit.",5,5,3,5,4.5,3.25,2,"dev",TRUE,11,TRUE
+"SIM1_0128",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission. He should pay Rivera.",5,5,5,6,4,3.5,5,"dev",TRUE,11,TRUE
+"SIM1_0129",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,5,4,4.5,3.5,5,"dev",TRUE,14,TRUE
+"SIM1_0130",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,3,6,4.25,3.25,5,"dev",TRUE,14,TRUE
+"SIM1_0131",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",5,5,4,4,4,2,5,"dev",TRUE,7,TRUE
+"SIM1_0132",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. He should give credit.",4,4,2,3,3,3.25,5,"dev",TRUE,11,TRUE
+"SIM1_0133",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked.",5,5,5,6,4.75,3.5,5,"dev",TRUE,9,TRUE
+"SIM1_0134",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. They should share the profits.",4,5,4,3,4,4.25,5,"dev",TRUE,12,TRUE
+"SIM1_0135",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,4,1,5,3.5,2,3,"dev",TRUE,13,TRUE
+"SIM1_0136",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong. They should share the profits.",5,5,4,5,4.25,1.25,3,"dev",TRUE,12,TRUE
+"SIM1_0137",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Rivera is a small artist and could lose income. He should give credit.",5,5,3,2,3.25,1.75,5,"dev",TRUE,20,TRUE
+"SIM1_0138",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,4,2,5,3.25,2.75,5,"dev",TRUE,13,TRUE
+"SIM1_0140",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. He should give credit.",4,5,5,6,4,3.25,4,"dev",TRUE,11,TRUE
+"SIM1_0141",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity. He should pay Rivera.",4,2,2,4,3.25,1.5,4,"dev",TRUE,11,TRUE
+"SIM1_0142",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong.",3,4,2,3,2,2.75,3,"dev",TRUE,7,TRUE
+"SIM1_0143",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. He should pay Rivera.",5,5,3,6,4.75,4.75,5,"dev",TRUE,19,TRUE
+"SIM1_0144",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this.",4,5,3,6,4.75,4.75,5,"dev",TRUE,15,TRUE
+"SIM1_0146",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. He should give credit.",5,5,5,2,4.25,3.5,4,"dev",TRUE,21,TRUE
+"SIM1_0147",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",4,5,1,6,4.75,2,5,"dev",TRUE,7,TRUE
+"SIM1_0148",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. They should share the profits.",5,3,4,5,4.25,1.75,2,"dev",TRUE,16,TRUE
+"SIM1_0149",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this. He should pay Rivera.",4,5,3,3,4.5,2.5,2,"dev",TRUE,19,TRUE
+"SIM1_0150",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should pay Rivera.",5,5,5,6,5,4.5,5,"dev",TRUE,11,TRUE
+"SIM1_0151",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",4,5,5,4,2.75,2,2,"dev",TRUE,7,TRUE
+"SIM1_0153",1,0.5,0.5,,"famous","unknown",,"famous/unknown","no",5,5,5,2,4.75,3,5,"dev",TRUE,1,FALSE
+"SIM1_0154",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,4,5,3.75,2.5,2,"dev",TRUE,7,TRUE
+"SIM1_0156",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Martinez is famous and should know better.",5,4,3,3,3.25,3,5,"dev",TRUE,14,TRUE
+"SIM1_0157",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",4,5,5,5,4.25,2.75,5,"dev",TRUE,7,TRUE
+"SIM1_0158",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. They should share the profits.",1,1,1,1,1.25,1.75,1,"dev",TRUE,12,TRUE
+"SIM1_0159",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked. They should share the profits.",2,4,1,6,2.25,2.5,2,"dev",TRUE,14,TRUE
+"SIM1_0160",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez added enough of his own creativity. They should share the profits.",1,3,3,6,3.5,2.25,5,"dev",TRUE,12,TRUE
+"SIM1_0163",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",5,5,5,4,4.5,4,5,"dev",TRUE,17,TRUE
+"SIM1_0165",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",5,4,5,5,3.75,4,3,"dev",TRUE,9,TRUE
+"SIM1_0166",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. He should give credit.",3,5,2,3,3.75,1.75,3,"dev",TRUE,11,TRUE
+"SIM1_0167",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Art builds on other art all the time. An unknown photographer is hurt more by this.",4,2,5,5,2.75,2.25,2,"dev",TRUE,16,TRUE
+"SIM1_0168",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",5,4,4,4,4.25,1.5,1,"dev",TRUE,7,TRUE
+"SIM1_0169",1,0.5,0.5,,"famous","unknown",,"famous/unknown","The new work is transformative enough to count as fair use. He should give credit.",2,3,1,1,1.75,1.5,4,"dev",TRUE,15,TRUE
+"SIM1_0170",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",5,4,5,6,5,3.75,5,"dev",TRUE,9,TRUE
+"SIM1_0171",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity. He should give credit.",1,3,4,3,4,2.25,2,"dev",TRUE,11,TRUE
+"SIM1_0172",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","The new work is transformative enough to count as fair use. He should pay Rivera.",1,1,1,2,2.25,1.25,2,"dev",TRUE,15,TRUE
+"SIM1_0173",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Art builds on other art all the time. He should pay Rivera.",2,2,1,2,1.75,1.5,1,"dev",TRUE,12,TRUE
+"SIM1_0174",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez added enough of his own creativity. An unknown photographer is hurt more by this.",5,2,4,2,4.25,3,4,"dev",TRUE,15,TRUE
+"SIM1_0175",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity. They should share the profits.",4,3,1,5,3.75,2.75,4,"dev",TRUE,12,TRUE
+"SIM1_0176",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should give credit.",5,5,5,4,3.75,2,4,"dev",TRUE,13,TRUE
+"SIM1_0177",1,0.5,-0.5,,"famous","famous",,"famous/famous","Art builds on other art all the time. Martinez is famous and should know better.",4,3,3,4,2.25,2,3,"dev",TRUE,15,TRUE
+"SIM1_0178",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. Rivera is a small artist and could lose income. He should give credit.",5,4,5,5,3.5,2,2,"dev",TRUE,20,TRUE
+"SIM1_0179",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked.",2,5,2,1,3.5,1,1,"dev",TRUE,9,TRUE
+"SIM1_0180",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. He should pay Rivera.",5,2,1,1,1.25,1.5,5,"dev",TRUE,15,TRUE
+"SIM1_0181",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",5,5,4,4,3,2.25,5,"dev",TRUE,7,TRUE
+"SIM1_0182",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked.",2,5,4,2,4.5,3,1,"dev",TRUE,9,TRUE
+"SIM1_0183",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission.",4,5,3,6,4,2,5,"dev",TRUE,7,TRUE
+"SIM1_0184",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should give credit.",5,5,4,4,3.75,4,3,"dev",TRUE,11,TRUE
+"SIM1_0185",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. They should share the profits.",4,5,2,1,2.75,3.25,2,"dev",TRUE,12,TRUE
+"SIM1_0186",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. Martinez is famous and should know better.",3,5,1,2,3,2,2,"dev",TRUE,16,TRUE
+"SIM1_0187",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez added enough of his own creativity. They should share the profits.",4,2,2,4,3.5,3.25,4,"dev",TRUE,12,TRUE
+"SIM1_0188",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. He should pay Rivera.",5,5,4,6,5,4.5,5,"dev",TRUE,11,TRUE
+"SIM1_0189",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",5,4,2,2,3,2.75,2,"dev",TRUE,17,TRUE
+"SIM1_0190",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong. He should pay Rivera.",5,5,1,3,3.5,1.75,4,"dev",TRUE,11,TRUE
+"SIM1_0191",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this. He should pay Rivera.",4,5,4,6,3.25,3.75,5,"dev",TRUE,19,TRUE
+"SIM1_0192",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity.",3,2,1,1,1.25,1.25,1,"dev",TRUE,7,TRUE
+"SIM1_0193",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked.",5,5,2,6,4,2,4,"dev",TRUE,9,TRUE
+"SIM1_0194",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. He should give credit.",3,4,2,3,3.75,2.5,3,"dev",TRUE,11,TRUE
+"SIM1_0195",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",4,5,2,6,3.5,2.25,2,"dev",TRUE,7,TRUE
+"SIM1_0196",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should give credit.",4,5,4,4,4,2.25,4,"dev",TRUE,13,TRUE
+"SIM1_0197",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. Martinez is famous and should know better. He should pay Rivera.",5,5,4,2,4,3.25,3,"dev",TRUE,20,TRUE
+"SIM1_0198",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked.",4,4,3,2,4.25,2.5,5,"dev",TRUE,9,TRUE
+"SIM1_0199",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",2,5,3,4,3.75,2.75,5,"dev",TRUE,7,TRUE
+"SIM1_0200",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. Martinez is famous and should know better.",2,3,1,3,3.25,1,2,"dev",TRUE,14,TRUE
+"SIM1_0201",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income.",5,5,3,5,4.75,4,5,"dev",TRUE,16,TRUE
+"SIM1_0203",1,0.5,-0.5,,"famous","famous",,"famous/famous","Art builds on other art all the time. He should give credit.",5,3,5,6,4,3,5,"dev",TRUE,12,TRUE
+"SIM1_0205",1,0.5,-0.5,,"famous","famous",,"famous/famous","no",5,4,5,6,4.25,3,4,"dev",TRUE,1,FALSE
+"SIM1_0206",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Martinez is famous and should know better.",5,4,3,4,3.25,4,4,"dev",TRUE,14,TRUE
+"SIM1_0207",1,0.5,-0.5,,"famous","famous",,"famous/famous","ok",5,5,5,4,4,2.5,5,"dev",TRUE,1,FALSE
+"SIM1_0208",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked.",5,5,3,6,2.5,2.25,5,"dev",TRUE,9,TRUE
+"SIM1_0209",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong.",5,5,5,4,4.25,3.5,5,"dev",TRUE,7,TRUE
+"SIM1_0212",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",5,4,3,4,4.25,3,5,"dev",TRUE,7,TRUE
+"SIM1_0213",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong.",3,5,1,3,5,3.75,2,"dev",TRUE,7,TRUE
+"SIM1_0215",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",1,5,1,5,2,1,1,"dev",TRUE,7,TRUE
+"SIM1_0222",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",4,4,1,3,3,2.5,4,"dev",TRUE,7,TRUE
+"SIM1_0223",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez added enough of his own creativity. An unknown photographer is hurt more by this. He should give credit.",5,3,1,5,4.75,4.25,5,"dev",TRUE,19,TRUE
+"SIM1_0224",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. They should share the profits.",2,5,3,1,2,2.5,4,"dev",TRUE,14,TRUE
+"SIM1_0225",1,0.5,0.5,,"famous","unknown",,"famous/unknown","The new work is transformative enough to count as fair use. Martinez is famous and should know better. They should share the profits.",5,2,3,2,3.25,2.75,5,"dev",TRUE,23,TRUE
+"SIM1_0226",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission.",5,4,4,4,4.25,2.5,4,"dev",TRUE,7,TRUE
+"SIM1_0227",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Martinez is famous and should know better. They should share the profits.",5,5,1,6,5,4,5,"dev",TRUE,19,TRUE
+"SIM1_0228",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Rivera is a small artist and could lose income. Martinez is famous and should know better.",5,5,4,6,5,4.25,5,"dev",TRUE,23,TRUE
+"SIM1_0229",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong. He should give credit.",5,5,3,4,4.25,3,5,"dev",TRUE,11,TRUE
+"SIM1_0231",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. He should give credit.",5,5,3,1,3.75,2.5,4,"dev",TRUE,11,TRUE
+"SIM1_0233",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. Martinez is famous and should know better.",5,3,5,6,3.75,3,4,"dev",TRUE,14,TRUE
+"SIM1_0234",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,4,5,4.5,5,5,"dev",TRUE,14,TRUE
+"SIM1_0235",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. They should share the profits.",5,5,5,6,5,5,5,"dev",TRUE,22,TRUE
+"SIM1_0236",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez did not ask Rivera for permission. Martinez is famous and should know better. He should pay Rivera.",5,5,3,4,5,4.25,5,"dev",TRUE,18,TRUE
+"SIM1_0237",1,0.5,0.5,,"famous","unknown",,"famous/unknown","The new work is transformative enough to count as fair use. He should pay Rivera.",1,3,1,4,2.75,2.25,1,"dev",TRUE,15,TRUE
+"SIM1_0238",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity.",1,1,1,4,1.5,1,1,"dev",TRUE,7,TRUE
+"SIM1_0239",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. He should give credit.",2,2,5,2,2.75,2,3,"dev",TRUE,15,TRUE
+"SIM1_0241",1,0.5,-0.5,,"famous","famous",,"famous/famous","Martinez added enough of his own creativity. They should share the profits.",3,3,2,4,2,1,3,"dev",TRUE,12,TRUE
+"SIM1_0243",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong.",3,5,2,1,2,1.25,1,"dev",TRUE,7,TRUE
+"SIM1_0244",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income.",4,5,3,5,4,3.5,5,"dev",TRUE,16,TRUE
+"SIM1_0245",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Martinez added enough of his own creativity. They should share the profits.",3,2,1,1,4.75,2.75,4,"dev",TRUE,12,TRUE
+"SIM1_0246",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked.",2,4,1,2,2.75,1.25,5,"dev",TRUE,9,TRUE
+"SIM1_0247",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Rivera owns the photograph and should have been asked.",5,5,5,3,4.5,3.25,4,"dev",TRUE,9,TRUE
+"SIM1_0248",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. He should pay Rivera.",2,4,2,1,4,2.75,5,"dev",TRUE,11,TRUE
+"SIM1_0249",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Art builds on other art all the time.",5,3,2,4,3.5,3.5,5,"dev",TRUE,8,TRUE
+"SIM1_0250",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income. He should pay Rivera.",5,4,3,5,3.5,3.25,2,"dev",TRUE,22,TRUE
+"SIM1_0251",1,0.5,0.5,,"famous","unknown",,"famous/unknown","no",5,3,2,3,3.75,3.25,2,"dev",TRUE,1,FALSE
+"SIM1_0252",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong.",4,5,5,6,2,3.25,5,"dev",TRUE,7,TRUE
+"SIM1_0253",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","The new work is transformative enough to count as fair use. He should give credit.",5,3,4,6,2.5,3.25,5,"dev",TRUE,15,TRUE
+"SIM1_0254",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission. They should share the profits.",2,5,2,5,2.5,2.25,3,"dev",TRUE,12,TRUE
+"SIM1_0255",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. He should give credit.",4,5,2,4,3.5,1.75,5,"dev",TRUE,13,TRUE
+"SIM1_0256",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Using someone's work without consent is wrong. Martinez is famous and should know better. He should give credit.",5,5,5,4,3.5,3.5,4,"dev",TRUE,18,TRUE
+"SIM1_0258",1,0.5,-0.5,,"famous","famous",,"famous/famous","The new work is transformative enough to count as fair use. Martinez is famous and should know better. He should pay Rivera.",1,3,1,2,2.5,1,3,"dev",TRUE,22,TRUE
+"SIM1_0259",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Art builds on other art all the time.",5,2,2,3,2.25,2,4,"dev",TRUE,8,TRUE
+"SIM1_0260",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Rivera owns the photograph and should have been asked. He should pay Rivera.",4,5,5,2,4.25,3,5,"dev",TRUE,13,TRUE
+"SIM1_0261",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. He should pay Rivera.",5,4,4,3,3.25,2.25,5,"dev",TRUE,19,TRUE
+"SIM1_0262",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong.",4,4,1,3,3.25,3,5,"dev",TRUE,7,TRUE
+"SIM1_0263",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity. He should give credit.",1,1,3,4,3.75,2.75,1,"dev",TRUE,11,TRUE
+"SIM1_0264",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",2,5,1,2,1.5,2,2,"dev",TRUE,7,TRUE
+"SIM1_0265",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Using someone's work without consent is wrong. He should give credit.",2,5,5,4,4,2.75,4,"dev",TRUE,11,TRUE
+"SIM1_0266",1,-0.5,0.5,,"unknown","unknown",,"unknown/unknown","Using someone's work without consent is wrong. He should pay Rivera.",5,5,5,6,4.5,3.75,5,"dev",TRUE,11,TRUE
+"SIM1_0267",1,0.5,-0.5,,"famous","famous",,"famous/famous","ok",2,5,4,4,3,1.75,2,"dev",TRUE,1,FALSE
+"SIM1_0268",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez added enough of his own creativity.",5,3,2,1,1.5,1,2,"dev",TRUE,7,TRUE
+"SIM1_0269",1,0.5,-0.5,,"famous","famous",,"famous/famous","Using someone's work without consent is wrong.",5,5,1,1,2.75,3,5,"dev",TRUE,7,TRUE
+"SIM1_0271",1,-0.5,-0.5,,"unknown","famous",,"unknown/famous","Martinez did not ask Rivera for permission.",2,5,1,1,2.75,2.25,4,"dev",TRUE,7,TRUE
+"SIM1_0273",1,0.5,-0.5,,"famous","famous",,"famous/famous","Rivera owns the photograph and should have been asked. Martinez is famous and should know better.",5,5,4,6,4.75,3.25,5,"dev",TRUE,16,TRUE
+"SIM1_0274",1,0.5,0.5,,"famous","unknown",,"famous/unknown","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. Martinez is famous and should know better.",3,5,3,2,2.75,2.75,4,"dev",TRUE,23,TRUE
+"SIM2_0001",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. An unknown photographer is hurt more by this.",4,5,5,1,4.25,3.5,5,"dev",TRUE,24,TRUE
+"SIM2_0005",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Using someone's work without consent is wrong. He should pay Rivera.",4,5,2,5,3,3.75,2,"dev",FALSE,11,TRUE
+"SIM2_0006",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. He should give credit.",5,5,3,6,5,3.25,4,"dev",FALSE,20,TRUE
+"SIM2_0012",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. The final piece looks very different from the original. He should give credit.",2,3,3,3,4.5,1.75,4,"dev",TRUE,21,TRUE
+"SIM2_0013",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","ok",1,5,4,1,2,3,5,"dev",TRUE,1,FALSE
+"SIM2_0016",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Using someone's work without consent is wrong. The final piece looks very different from the original.",5,5,1,5,1.75,1.25,2,"dev",TRUE,16,TRUE
+"SIM2_0017",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission.",5,5,3,1,3,2,4,"dev",TRUE,7,TRUE
+"SIM2_0024",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph.",5,5,5,6,5,5,5,"dev",FALSE,15,TRUE
+"SIM2_0025",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. They should share the profits.",5,4,4,2,4.25,3.25,5,"dev",TRUE,12,TRUE
+"SIM2_0026",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,5,5,3,4,3,4,"dev",TRUE,17,TRUE
+"SIM2_0027",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. It is basically a copy with a signature. They should share the profits.",4,5,1,5,3.75,3,2,"dev",FALSE,20,TRUE
+"SIM2_0030",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. They should share the profits.",5,5,2,4,4.5,2.5,3,"dev",TRUE,20,TRUE
+"SIM2_0031",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images.",4,3,5,6,3.75,2.5,3,"dev",TRUE,20,TRUE
+"SIM2_0034",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. He should pay Rivera.",4,5,4,2,3.5,4,4,"dev",TRUE,11,TRUE
+"SIM2_0038",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Art builds on other art all the time. Martinez is famous and should know better.",5,2,5,3,3.25,3.75,4,"dev",FALSE,15,TRUE
+"SIM2_0046",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked.",2,4,2,4,2.5,1,2,"dev",TRUE,9,TRUE
+"SIM2_0047",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. He should give credit.",1,4,5,1,2.25,1.25,1,"dev",TRUE,23,TRUE
+"SIM2_0050",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission.",4,5,3,6,4.5,3,4,"dev",FALSE,7,TRUE
+"SIM2_0056",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","no",4,3,1,2,2,1.5,2,"dev",FALSE,1,FALSE
+"SIM2_0057",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","The new work is transformative enough to count as fair use.",2,3,1,1,1.25,1,2,"dev",TRUE,11,TRUE
+"SIM2_0058",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. Rivera is a small artist and could lose income.",4,5,4,4,3.25,3.25,4,"dev",TRUE,16,TRUE
+"SIM2_0059",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. An unknown photographer is hurt more by this.",5,4,1,6,4.25,3.75,3,"dev",TRUE,15,TRUE
+"SIM2_0062",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time.",4,3,5,4,2.25,3,2,"dev",FALSE,8,TRUE
+"SIM2_0064",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","The new work is transformative enough to count as fair use.",4,3,1,4,3,1.5,2,"dev",FALSE,11,TRUE
+"SIM2_0078",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. The final piece looks very different from the original. An unknown photographer is hurt more by this.",3,1,5,2,3.5,1.5,2,"dev",TRUE,25,TRUE
+"SIM2_0080",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,5,5,3,4.75,2.5,1,"dev",TRUE,17,TRUE
+"SIM2_0083",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,5,5,5,4.5,3.5,5,"dev",TRUE,17,TRUE
+"SIM2_0085",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. He should give credit.",5,5,3,5,5,3,4,"dev",FALSE,13,TRUE
+"SIM2_0088",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this. He should give credit.",3,4,5,5,4.25,2.75,5,"dev",TRUE,29,TRUE
+"SIM2_0089",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission.",3,4,4,5,2.25,2,1,"dev",TRUE,7,TRUE
+"SIM2_0095",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission.",5,5,5,5,5,4.75,5,"dev",TRUE,7,TRUE
+"SIM2_0096",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. They should share the profits.",3,5,5,6,2.25,2.75,2,"dev",TRUE,12,TRUE
+"SIM2_0098",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. Martinez is famous and should know better.",5,5,5,6,4.75,5,5,"dev",TRUE,28,TRUE
+"SIM2_0100",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original. Rivera is a small artist and could lose income.",4,5,4,4,4.75,3,3,"dev",TRUE,25,TRUE
+"SIM2_0101",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. An unknown photographer is hurt more by this.",3,5,3,4,4.5,3.75,4,"dev",TRUE,23,TRUE
+"SIM2_0102",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","The new work is transformative enough to count as fair use. The final piece looks very different from the original.",2,3,1,6,3.25,1.75,3,"dev",TRUE,20,TRUE
+"SIM2_0103",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this.",5,5,4,6,4.5,4,5,"dev",TRUE,17,TRUE
+"SIM2_0107",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. They should share the profits.",5,4,4,3,4.5,3.5,2,"dev",FALSE,12,TRUE
+"SIM2_0108",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. He should pay Rivera.",5,5,4,1,5,3.25,5,"dev",TRUE,19,TRUE
+"SIM2_0111",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income.",4,3,1,3,3.5,3,4,"dev",TRUE,32,TRUE
+"SIM2_0113",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez added enough of his own creativity. It is basically a copy with a signature. He should give credit.",5,2,2,2,3.75,1.5,3,"dev",FALSE,19,TRUE
+"SIM2_0117",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Art builds on other art all the time. An unknown photographer is hurt more by this. He should pay Rivera.",4,1,1,3,2.75,2.75,4,"dev",TRUE,20,TRUE
+"SIM2_0121",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. He should give credit.",5,5,5,4,5,2.75,5,"dev",FALSE,11,TRUE
+"SIM2_0124",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong.",5,5,5,5,4.5,4.25,5,"dev",TRUE,7,TRUE
+"SIM2_0126",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. Martinez is famous and should know better. They should share the profits.",4,5,4,2,4.5,3.25,5,"dev",TRUE,29,TRUE
+"SIM2_0131",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph.",2,5,2,3,2.25,1.5,4,"dev",TRUE,17,TRUE
+"SIM2_0132",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Art builds on other art all the time.",4,3,4,5,3,1.25,1,"dev",TRUE,8,TRUE
+"SIM2_0133",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. Rivera is a small artist and could lose income. He should pay Rivera.",3,4,1,2,3.25,3,4,"dev",TRUE,29,TRUE
+"SIM2_0134",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. Martinez is famous and should know better.",5,5,5,4,4,3,3,"dev",FALSE,22,TRUE
+"SIM2_0135",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. Rivera is a small artist and could lose income. He should give credit.",5,5,2,4,4.5,4.5,5,"dev",FALSE,30,TRUE
+"SIM2_0137",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong.",4,4,3,3,3.25,3.75,4,"dev",TRUE,7,TRUE
+"SIM2_0138",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez added enough of his own creativity. He changed the image a lot and combined it with other images. He should give credit.",2,2,1,2,1,1,2,"dev",TRUE,23,TRUE
+"SIM2_0139",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","The new work is transformative enough to count as fair use. He should pay Rivera.",5,2,1,1,3.5,2.75,5,"dev",TRUE,15,TRUE
+"SIM2_0140",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. Martinez is famous and should know better. They should share the profits.",5,5,5,6,4.5,4.5,4,"dev",TRUE,19,TRUE
+"SIM2_0142",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. He should pay Rivera.",4,4,3,1,2.25,2.25,3,"dev",TRUE,22,TRUE
+"SIM2_0144",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. He should give credit.",5,5,5,2,3.25,3.25,5,"dev",TRUE,23,TRUE
+"SIM2_0147",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Art builds on other art all the time.",2,3,1,2,2.5,1.25,5,"dev",TRUE,8,TRUE
+"SIM2_0152",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,2,6,3,2.5,5,"dev",TRUE,14,TRUE
+"SIM2_0155",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Art builds on other art all the time. An unknown photographer is hurt more by this. Martinez is famous and should know better.",3,2,2,1,1,1,3,"dev",FALSE,23,TRUE
+"SIM2_0158",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. Martinez is famous and should know better.",5,5,5,2,5,4.25,5,"dev",TRUE,23,TRUE
+"SIM2_0159",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",4,4,2,6,2.25,2.25,2,"dev",TRUE,17,TRUE
+"SIM2_0160",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time.",3,2,1,1,2,1,1,"dev",TRUE,8,TRUE
+"SIM2_0163",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. They should share the profits.",5,4,1,2,2.75,1.75,5,"dev",FALSE,12,TRUE
+"SIM2_0166",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images. Martinez is famous and should know better.",5,5,3,5,4.25,3.5,4,"dev",TRUE,26,TRUE
+"SIM2_0168",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this. He should give credit.",1,4,1,2,2,1.5,1,"dev",TRUE,19,TRUE
+"SIM2_0172",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission.",4,4,2,4,3.25,3,1,"dev",FALSE,7,TRUE
+"SIM2_0173",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. They should share the profits.",1,1,1,1,1,1,1,"dev",TRUE,25,TRUE
+"SIM2_0175",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. Rivera is a small artist and could lose income. Martinez is famous and should know better. They should share the profits.",2,4,4,2,2.25,3.25,3,"dev",FALSE,39,TRUE
+"SIM2_0179",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. He should pay Rivera.",1,5,3,3,2.5,1.75,4,"dev",TRUE,13,TRUE
+"SIM2_0181",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. They should share the profits.",5,5,5,5,3.75,3,5,"dev",TRUE,20,TRUE
+"SIM2_0184",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez added enough of his own creativity. The final piece looks very different from the original. They should share the profits.",4,3,4,5,3.25,3.25,5,"dev",TRUE,21,TRUE
+"SIM2_0185",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. They should share the profits.",5,5,5,3,4.25,3.25,5,"dev",TRUE,20,TRUE
+"SIM2_0187",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. An unknown photographer is hurt more by this. Martinez is famous and should know better.",3,5,4,3,3.25,3.75,2,"dev",TRUE,22,TRUE
+"SIM2_0191",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission.",5,5,2,3,3.25,1.75,3,"dev",TRUE,7,TRUE
+"SIM2_0192",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature.",5,5,5,1,4.75,4.25,5,"dev",TRUE,15,TRUE
+"SIM2_0193",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. Martinez is famous and should know better.",4,4,2,4,3.75,1.5,3,"dev",FALSE,14,TRUE
+"SIM2_0195",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images.",5,5,5,3,4,4.75,3,"dev",FALSE,21,TRUE
+"SIM2_0196",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. They should share the profits.",5,5,5,6,5,4.5,3,"dev",TRUE,20,TRUE
+"SIM2_0199",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission.",3,5,5,3,3.5,3.75,4,"dev",TRUE,7,TRUE
+"SIM2_0201",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. They should share the profits.",5,5,2,4,2.5,2.75,1,"dev",FALSE,22,TRUE
+"SIM2_0204",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",5,5,5,5,4.75,4.5,5,"dev",TRUE,15,TRUE
+"SIM2_0205",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","not fair",5,5,3,1,2.5,2.5,3,"dev",TRUE,2,FALSE
+"SIM2_0206",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. He should pay Rivera.",5,5,5,6,4.5,4.5,5,"dev",TRUE,22,TRUE
+"SIM2_0007",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,4,3,3,3.25,2,5,"test",TRUE,17,TRUE
+"SIM2_0014",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. He should pay Rivera.",5,5,5,5,3.75,3.25,3,"test",TRUE,21,TRUE
+"SIM2_0019",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong.",5,5,5,5,4.75,4,4,"test",TRUE,7,TRUE
+"SIM2_0020",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. They should share the profits.",5,5,5,3,4.25,3.25,5,"test",TRUE,24,TRUE
+"SIM2_0035",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph.",5,5,4,4,5,4.5,5,"test",TRUE,15,TRUE
+"SIM2_0037",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez added enough of his own creativity. It is basically a copy with a signature. Martinez is famous and should know better. They should share the profits.",5,3,3,5,4.75,2.75,4,"test",TRUE,27,TRUE
+"SIM2_0040",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission.",3,4,5,6,4,2.75,5,"test",TRUE,7,TRUE
+"SIM2_0043",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. He should pay Rivera.",4,5,5,4,4.5,2.25,5,"test",TRUE,11,TRUE
+"SIM2_0044",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","not fair",5,5,5,5,4.5,3.5,5,"test",TRUE,2,FALSE
+"SIM2_0055",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,5,5,5,4.5,4,5,"test",TRUE,13,TRUE
+"SIM2_0065",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. They should share the profits.",5,5,2,6,4.25,3.25,5,"test",TRUE,20,TRUE
+"SIM2_0067",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","The new work is transformative enough to count as fair use.",5,2,5,6,2.5,2.75,5,"test",TRUE,11,TRUE
+"SIM2_0070",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,5,2,5,3.25,4,3,"test",TRUE,13,TRUE
+"SIM2_0071",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked.",4,4,3,5,4.25,4.25,4,"test",TRUE,9,TRUE
+"SIM2_0075",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. Rivera is a small artist and could lose income.",3,5,3,2,3.25,2.5,2,"test",TRUE,16,TRUE
+"SIM2_0081",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",5,5,4,6,4.5,4,4,"test",TRUE,15,TRUE
+"SIM2_0090",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez added enough of his own creativity. It is basically a copy with a signature. Rivera is a small artist and could lose income. He should give credit.",4,3,3,2,1.75,1.25,3,"test",TRUE,28,TRUE
+"SIM2_0097",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images.",4,2,1,2,3,2.75,4,"test",TRUE,20,TRUE
+"SIM2_0104",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income.",2,4,5,1,2,1,2,"test",TRUE,18,TRUE
+"SIM2_0109",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. They should share the profits.",5,4,2,5,3.75,2.25,3,"test",TRUE,22,TRUE
+"SIM2_0112",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","ok",5,5,5,5,4.5,4.5,4,"test",TRUE,1,FALSE
+"SIM2_0118",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. It is basically a copy with a signature. He should pay Rivera.",3,5,2,1,3,2.5,1,"test",TRUE,19,TRUE
+"SIM2_0119",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. Rivera is a small artist and could lose income. He should pay Rivera.",5,5,4,6,4.5,4.75,5,"test",TRUE,20,TRUE
+"SIM2_0120",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. Martinez is famous and should know better. He should pay Rivera.",5,5,5,6,4.75,4.5,4,"test",TRUE,26,TRUE
+"SIM2_0125",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez added enough of his own creativity.",1,1,1,1,1,1.25,1,"test",TRUE,7,TRUE
+"SIM2_0129",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","The new work is transformative enough to count as fair use. The work looks nearly identical to the photograph.",5,3,2,4,4.5,2.25,1,"test",TRUE,19,TRUE
+"SIM2_0143",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. He changed the image a lot and combined it with other images.",3,2,1,5,2.5,1.5,3,"test",TRUE,20,TRUE
+"SIM2_0146",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Art builds on other art all the time. He should give credit.",4,3,4,3,3.5,2.75,4,"test",TRUE,12,TRUE
+"SIM2_0149",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. They should share the profits.",4,2,1,5,4.75,2.5,2,"test",TRUE,28,TRUE
+"SIM2_0153",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",3,4,4,1,1.5,2.5,2,"test",TRUE,17,TRUE
+"SIM2_0157",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez added enough of his own creativity. The final piece looks very different from the original. Martinez is famous and should know better.",1,2,5,1,2,1,2,"test",TRUE,23,TRUE
+"SIM2_0161",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. He should pay Rivera.",4,4,4,3,3.25,2.75,5,"test",TRUE,19,TRUE
+"SIM2_0164",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. He should give credit.",5,5,4,5,4.25,3.25,5,"test",TRUE,19,TRUE
+"SIM2_0176",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. They should share the profits.",3,5,5,4,4.25,3.75,5,"test",TRUE,20,TRUE
+"SIM2_0177",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original.",5,5,5,6,4.75,4.5,3,"test",TRUE,18,TRUE
+"SIM2_0178",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. An unknown photographer is hurt more by this. They should share the profits.",5,3,2,3,5,3.75,5,"test",TRUE,33,TRUE
+"SIM2_0188",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph.",3,4,3,3,4.25,2,3,"test",TRUE,15,TRUE
+"SIM2_0189",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Art builds on other art all the time. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this. They should share the profits.",5,3,5,5,5,3,3,"test",TRUE,29,TRUE
+"SIM2_0190",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. They should share the profits.",5,5,4,4,4.5,2.75,5,"test",TRUE,12,TRUE
+"SIM2_0200",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked.",4,5,4,5,3.5,4.5,5,"test",TRUE,9,TRUE
+"SIM2_0202",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","The new work is transformative enough to count as fair use. It is basically a copy with a signature. Rivera is a small artist and could lose income.",4,2,1,3,3,3,2,"test",TRUE,28,TRUE
+"SIM2_0208",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. He should pay Rivera.",5,4,5,4,4.25,4.25,5,"test",TRUE,19,TRUE
+"SIM2_0209",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. They should share the profits.",2,4,2,2,2.75,1.75,4,"test",TRUE,24,TRUE
+"SIM2_0210",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. An unknown photographer is hurt more by this. Martinez is famous and should know better.",4,4,4,6,3,3,5,"test",TRUE,22,TRUE
+"SIM2_0212",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images.",3,4,3,4,1.75,1,3,"test",TRUE,19,TRUE
+"SIM2_0213",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez added enough of his own creativity.",2,3,3,3,1.75,3,5,"test",TRUE,7,TRUE
+"SIM2_0215",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original. They should share the profits.",4,4,2,5,4,4,5,"test",TRUE,21,TRUE
+"SIM2_0217",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this. Martinez is famous and should know better. They should share the profits.",5,5,4,6,5,4,5,"test",TRUE,37,TRUE
+"SIM2_0218",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He should give credit.",5,4,5,5,5,4.75,5,"test",TRUE,13,TRUE
+"SIM2_0219",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,5,5,5,4.25,3.25,5,"test",TRUE,17,TRUE
+"SIM2_0226",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. An unknown photographer is hurt more by this.",5,5,5,6,4.75,4.75,5,"test",TRUE,29,TRUE
+"SIM2_0227",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong.",5,5,4,6,5,3.25,5,"test",TRUE,7,TRUE
+"SIM2_0228",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","not fair",5,5,2,5,4.25,3,5,"test",TRUE,2,FALSE
+"SIM2_0230",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez added enough of his own creativity. He changed the image a lot and combined it with other images. An unknown photographer is hurt more by this. They should share the profits.",1,1,3,3,2.25,2.5,4,"test",TRUE,32,TRUE
+"SIM2_0232",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez added enough of his own creativity. They should share the profits.",4,2,4,5,3.25,1.25,5,"test",TRUE,12,TRUE
+"SIM2_0234",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked. He should give credit.",5,5,5,6,4.5,2.5,5,"test",TRUE,13,TRUE
+"SIM2_0240",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","The new work is transformative enough to count as fair use.",2,3,3,3,2.75,2.25,3,"test",TRUE,11,TRUE
+"SIM2_0242",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature. Rivera is a small artist and could lose income.",5,5,1,2,3.75,2.75,3,"test",TRUE,24,TRUE
+"SIM2_0244",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature. They should share the profits.",5,5,2,4,4,4.25,4,"test",TRUE,20,TRUE
+"SIM2_0248",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","The new work is transformative enough to count as fair use. The final piece looks very different from the original. Martinez is famous and should know better.",3,3,2,4,3,3.25,5,"test",TRUE,27,TRUE
+"SIM2_0249",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images.",4,3,4,2,2,1.75,1,"test",TRUE,20,TRUE
+"SIM2_0250",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph.",5,5,2,6,4,3.5,4,"test",TRUE,15,TRUE
+"SIM2_0252",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. They should share the profits.",5,5,5,5,4.5,3.75,5,"test",TRUE,22,TRUE
+"SIM2_0255",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He should give credit.",3,4,2,2,2.75,2,5,"test",TRUE,13,TRUE
+"SIM2_0257",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Art builds on other art all the time. The work looks nearly identical to the photograph.",3,1,5,2,2.75,1.75,4,"test",TRUE,16,TRUE
+"SIM2_0259",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. He should give credit.",3,5,4,3,5,5,5,"test",TRUE,19,TRUE
+"SIM2_0260",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. The final piece looks very different from the original. He should pay Rivera.",3,4,3,2,4,3.25,5,"test",TRUE,20,TRUE
+"SIM2_0262",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","not fair",5,5,1,5,3,3.25,3,"test",TRUE,2,FALSE
+"SIM2_0263",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. He should pay Rivera.",5,4,4,2,4,2.5,4,"test",TRUE,11,TRUE
+"SIM2_0265",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","no",5,5,4,5,4.25,3.5,5,"test",TRUE,1,FALSE
+"SIM2_0266",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original.",5,5,5,5,5,4.25,5,"test",TRUE,16,TRUE
+"SIM2_0269",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","The new work is transformative enough to count as fair use. The work looks nearly identical to the photograph.",1,3,5,2,3.5,2.25,5,"test",TRUE,19,TRUE
+"SIM2_0272",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked.",5,4,3,4,4.25,3,5,"test",TRUE,9,TRUE
+"SIM2_0274",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez added enough of his own creativity. The work looks nearly identical to the photograph. Martinez is famous and should know better.",5,3,5,6,4.25,2.5,5,"test",TRUE,22,TRUE
+"SIM2_0275",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong.",5,5,4,1,3.5,2.75,4,"test",TRUE,7,TRUE
+"SIM2_0277",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. He should pay Rivera.",4,2,2,3,3,3.25,3,"test",TRUE,24,TRUE
+"SIM2_0279",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. They should share the profits.",5,5,5,3,3.5,4.5,5,"test",TRUE,12,TRUE
+"SIM2_0280",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. They should share the profits.",5,5,5,6,3.75,3.25,5,"test",TRUE,26,TRUE
+"SIM2_0281",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. Martinez is famous and should know better.",2,5,5,2,3,3,5,"test",TRUE,25,TRUE
+"SIM2_0283",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. The final piece looks very different from the original. Martinez is famous and should know better.",5,5,5,6,3.5,4.25,1,"test",TRUE,23,TRUE
+"SIM2_0284",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Art builds on other art all the time. The work looks nearly identical to the photograph. Martinez is famous and should know better.",4,1,5,2,2.75,1.75,3,"test",TRUE,23,TRUE
+"SIM2_0285",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","The new work is transformative enough to count as fair use. He should give credit.",3,1,1,3,1.5,1.25,3,"test",TRUE,15,TRUE
+"SIM2_0287",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph.",5,5,5,6,5,4.5,5,"test",TRUE,17,TRUE
+"SIM2_0288",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","no",3,4,3,2,3.25,1.25,4,"test",TRUE,1,FALSE
+"SIM2_0290",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked.",4,4,2,6,3,3,3,"test",TRUE,9,TRUE
+"SIM2_0295",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. Rivera is a small artist and could lose income. He should give credit.",5,5,1,1,2.5,2.5,4,"test",TRUE,28,TRUE
+"SIM2_0296",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images.",5,5,5,6,3.5,3.25,5,"test",TRUE,19,TRUE
+"SIM2_0297",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph.",5,5,2,4,3,2.75,4,"test",TRUE,17,TRUE
+"SIM2_0298",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez added enough of his own creativity. An unknown photographer is hurt more by this.",4,2,2,1,2.75,2.75,5,"test",TRUE,15,TRUE
+"SIM2_0299",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images. He should give credit.",3,5,3,4,5,2.75,4,"test",TRUE,23,TRUE
+"SIM2_0301",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original. An unknown photographer is hurt more by this. Martinez is famous and should know better.",3,4,1,1,3.5,3,5,"test",TRUE,31,TRUE
+"SIM2_0304",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. He should pay Rivera.",5,5,5,5,4.25,4.25,5,"test",TRUE,11,TRUE
+"SIM2_0305",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",3,4,2,5,3,1.75,5,"test",TRUE,15,TRUE
+"SIM2_0308",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. Martinez is famous and should know better.",2,4,1,2,1.5,1.5,1,"test",TRUE,23,TRUE
+"SIM2_0310",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. An unknown photographer is hurt more by this.",5,5,2,1,3.25,3,2,"test",TRUE,23,TRUE
+"SIM2_0312",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. Rivera is a small artist and could lose income. He should give credit.",5,5,5,3,4.5,3.5,5,"test",TRUE,28,TRUE
+"SIM2_0313",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. The final piece looks very different from the original.",5,5,5,5,5,5,5,"test",TRUE,16,TRUE
+"SIM2_0316",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. They should share the profits.",4,4,5,4,4.5,2,5,"test",TRUE,22,TRUE
+"SIM2_0317",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. Martinez is famous and should know better.",5,5,3,2,3.25,2,3,"test",TRUE,24,TRUE
+"SIM2_0318",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. He should pay Rivera.",4,5,5,6,4,2,5,"test",TRUE,19,TRUE
+"SIM2_0321",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. Martinez is famous and should know better.",4,5,4,3,4.75,2.5,3,"test",TRUE,22,TRUE
+"SIM2_0322",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images.",3,5,1,6,4.25,4.25,4,"test",TRUE,19,TRUE
+"SIM2_0323",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. They should share the profits.",5,5,4,4,3.5,1.75,3,"test",TRUE,22,TRUE
+"SIM2_0325",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. He should pay Rivera.",4,1,5,3,4,3.25,5,"test",TRUE,24,TRUE
+"SIM2_0326",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","ok",3,2,4,3,2,1.25,1,"test",TRUE,1,FALSE
+"SIM2_0328",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",1,4,2,4,2.25,1.5,2,"test",TRUE,17,TRUE
+"SIM2_0329",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. An unknown photographer is hurt more by this.",3,2,5,3,3.25,1.5,4,"test",TRUE,19,TRUE
+"SIM2_0331",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. An unknown photographer is hurt more by this. He should give credit.",5,5,2,6,4.75,5,5,"test",TRUE,21,TRUE
+"SIM2_0332",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. He should pay Rivera.",4,4,5,1,3.75,2.5,4,"test",TRUE,11,TRUE
+"SIM2_0333",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. He should give credit.",5,5,4,6,3.25,2,5,"test",TRUE,21,TRUE
+"SIM2_0334",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. He should give credit.",5,4,5,2,3,4.75,4,"test",TRUE,23,TRUE
+"SIM2_0337",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","no",1,5,5,3,3.25,2.5,2,"test",TRUE,1,FALSE
+"SIM2_0341",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Art builds on other art all the time. It is basically a copy with a signature. Rivera is a small artist and could lose income.",2,3,4,1,3.25,2.5,3,"test",TRUE,25,TRUE
+"SIM2_0343",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","The new work is transformative enough to count as fair use. It is basically a copy with a signature. They should share the profits.",3,2,1,2,1.25,2,3,"test",TRUE,24,TRUE
+"SIM2_0344",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature. Rivera is a small artist and could lose income. He should pay Rivera.",3,5,5,4,4.75,3,3,"test",TRUE,28,TRUE
+"SIM2_0345",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. He should give credit.",2,4,2,1,2.25,1.25,5,"test",TRUE,21,TRUE
+"SIM2_0347",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images.",2,5,4,2,3,2,3,"test",TRUE,21,TRUE
+"SIM2_0348",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. An unknown photographer is hurt more by this. He should give credit.",3,5,4,5,4,3,5,"test",TRUE,28,TRUE
+"SIM2_0350",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","not fair",4,4,5,5,4.75,5,5,"test",TRUE,2,FALSE
+"SIM2_0352",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. He should give credit.",5,5,5,6,4.75,3.5,3,"test",TRUE,11,TRUE
+"SIM2_0353",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. Rivera is a small artist and could lose income. He should pay Rivera.",5,5,5,4,4.75,3.25,5,"test",TRUE,28,TRUE
+"SIM2_0354",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","The new work is transformative enough to count as fair use. It is basically a copy with a signature. Martinez is famous and should know better.",3,1,1,6,2.75,1.5,2,"test",TRUE,26,TRUE
+"SIM2_0356",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature.",3,5,3,4,3.25,1.75,2,"test",TRUE,15,TRUE
+"SIM2_0357",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. They should share the profits.",5,4,5,6,4,4,5,"test",TRUE,14,TRUE
+"SIM2_0358",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","not fair",4,2,1,1,3.5,3.75,4,"test",TRUE,2,FALSE
+"SIM2_0359",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. He should give credit.",5,5,5,6,4.5,1.75,4,"test",TRUE,11,TRUE
+"SIM2_0360",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income.",3,4,2,6,2.75,2.75,3,"test",TRUE,30,TRUE
+"SIM2_0361",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He should pay Rivera.",5,5,4,4,4.25,3.75,5,"test",TRUE,13,TRUE
+"SIM2_0363",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong.",5,4,4,3,3,1.5,2,"test",TRUE,7,TRUE
+"SIM2_0364",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. Martinez is famous and should know better.",3,4,2,2,3.25,3,4,"test",TRUE,14,TRUE
+"SIM2_0365",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked.",5,5,5,5,4,3,4,"test",TRUE,9,TRUE
+"SIM2_0368",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images. They should share the profits.",5,4,5,5,4,3.5,5,"test",TRUE,24,TRUE
+"SIM2_0369",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez added enough of his own creativity. He changed the image a lot and combined it with other images. Martinez is famous and should know better. He should pay Rivera.",3,2,2,4,1.5,1.5,3,"test",TRUE,30,TRUE
+"SIM2_0370",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",4,4,5,6,4.75,4.75,5,"test",TRUE,15,TRUE
+"SIM2_0371",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. The final piece looks very different from the original. Rivera is a small artist and could lose income. He should give credit.",3,3,5,2,2.5,3.75,4,"test",TRUE,30,TRUE
+"SIM2_0372",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He should pay Rivera.",5,5,5,5,4.75,4.5,3,"test",TRUE,11,TRUE
+"SIM2_0374",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. He should pay Rivera.",5,5,5,4,4.75,3.25,5,"test",TRUE,19,TRUE
+"SIM2_0375",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this.",5,5,2,4,5,4,5,"test",TRUE,23,TRUE
+"SIM2_0377",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images.",4,5,5,4,4.75,3.25,5,"test",TRUE,19,TRUE
+"SIM2_0379",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",3,4,3,2,1.5,1.25,4,"test",TRUE,15,TRUE
+"SIM2_0381",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature.",5,5,2,3,3,1.75,3,"test",TRUE,15,TRUE
+"SIM2_0382",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph.",5,5,5,3,3,1.25,4,"test",TRUE,17,TRUE
+"SIM2_0385",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. Martinez is famous and should know better.",4,2,3,5,3.75,3.75,5,"test",TRUE,30,TRUE
+"SIM2_0387",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income. He should give credit.",5,5,4,6,5,3.25,4,"test",TRUE,22,TRUE
+"SIM2_0389",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission.",5,5,5,2,3,3.5,5,"test",TRUE,7,TRUE
+"SIM2_0392",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. Rivera is a small artist and could lose income.",5,4,2,6,4.5,4,4,"test",TRUE,26,TRUE
+"SIM2_0394",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission. He should give credit.",5,5,5,5,4.75,3.75,5,"test",TRUE,11,TRUE
+"SIM2_0395",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez added enough of his own creativity. Rivera is a small artist and could lose income.",3,3,2,1,1.75,1.5,2,"test",TRUE,16,TRUE
+"SIM2_0398",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. They should share the profits.",2,2,1,1,1.25,1,2,"test",TRUE,25,TRUE
+"SIM2_0400",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Using someone's work without consent is wrong.",5,5,5,6,3.75,4,2,"test",TRUE,7,TRUE
+"SIM2_0402",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. It is basically a copy with a signature. He should give credit.",5,5,5,4,3.5,3,2,"test",TRUE,19,TRUE
+"SIM2_0403",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. They should share the profits.",5,4,2,3,3.25,2.25,4,"test",TRUE,20,TRUE
+"SIM2_0404",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez added enough of his own creativity.",5,2,1,3,1.5,1.5,3,"test",TRUE,7,TRUE
+"SIM2_0405",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. The final piece looks very different from the original.",5,4,5,3,4.25,3.25,4,"test",TRUE,16,TRUE
+"SIM2_0407",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income. He should pay Rivera.",3,4,4,3,2.75,3.5,5,"test",TRUE,22,TRUE
+"SIM2_0409",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature.",5,5,4,6,3,2.5,5,"test",TRUE,15,TRUE
+"SIM2_0410",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. They should share the profits.",5,4,2,4,4,2.5,5,"test",TRUE,14,TRUE
+"SIM2_0412",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. An unknown photographer is hurt more by this. They should share the profits.",3,3,2,3,2.5,2.75,3,"test",TRUE,36,TRUE
+"SIM2_0413",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. The final piece looks very different from the original.",1,1,1,4,2,1.25,2,"test",TRUE,17,TRUE
+"SIM2_0415",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez added enough of his own creativity. The work looks nearly identical to the photograph. He should give credit.",5,3,1,5,4.25,2,5,"test",TRUE,19,TRUE
+"SIM2_0417",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income. Martinez is famous and should know better.",1,3,1,3,2.5,1.75,4,"test",TRUE,39,TRUE
+"SIM2_0418",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez did not ask Rivera for permission.",5,5,5,5,5,5,5,"test",TRUE,7,TRUE
+"SIM2_0422",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. It is basically a copy with a signature.",5,5,5,6,5,5,5,"test",TRUE,15,TRUE
+"SIM2_0424",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. He should give credit.",5,5,3,1,2.5,1.5,5,"test",TRUE,19,TRUE
+"SIM2_0425",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Rivera owns the photograph and should have been asked.",2,4,1,4,3.75,3.75,4,"test",TRUE,9,TRUE
+"SIM2_0426",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. It is basically a copy with a signature. They should share the profits.",5,5,3,5,3.75,4.25,5,"test",TRUE,20,TRUE
+"SIM2_0428",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez added enough of his own creativity. He should pay Rivera.",4,2,2,4,2.25,3,4,"test",TRUE,11,TRUE
+"SIM2_0429",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. They should share the profits.",5,5,3,5,4.5,4.25,5,"test",TRUE,20,TRUE
+"SIM2_0430",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. Martinez is famous and should know better. They should share the profits.",5,5,5,6,4.75,3.75,5,"test",TRUE,30,TRUE
+"SIM2_0431",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images. Martinez is famous and should know better. He should pay Rivera.",4,5,5,5,3.25,2.25,4,"test",TRUE,30,TRUE
+"SIM2_0433",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked.",5,5,4,2,2.75,1.75,1,"test",TRUE,9,TRUE
+"SIM2_0436",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. He should pay Rivera.",5,5,4,5,4,3.75,5,"test",TRUE,19,TRUE
+"SIM2_0437",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission.",3,4,5,5,4,3.75,5,"test",TRUE,7,TRUE
+"SIM2_0439",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. They should share the profits.",2,5,4,3,3,3.5,3,"test",TRUE,14,TRUE
+"SIM2_0440",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. Martinez is famous and should know better. They should share the profits.",4,5,3,6,4.25,4,5,"test",TRUE,28,TRUE
+"SIM2_0441",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. They should share the profits.",3,3,1,1,3.25,2.5,5,"test",TRUE,16,TRUE
+"SIM2_0443",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","no",1,2,3,1,2,1.75,2,"test",TRUE,1,FALSE
+"SIM2_0448",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Art builds on other art all the time. He changed the image a lot and combined it with other images. An unknown photographer is hurt more by this. He should pay Rivera.",3,2,4,1,2.25,2.5,4,"test",TRUE,32,TRUE
+"SIM2_0449",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Art builds on other art all the time. The work looks nearly identical to the photograph. Rivera is a small artist and could lose income. Martinez is famous and should know better.",5,3,5,6,5,4,5,"test",TRUE,32,TRUE
+"SIM2_0450",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. Rivera is a small artist and could lose income. He should give credit.",3,1,3,4,2,2.25,4,"test",TRUE,21,TRUE
+"SIM2_0451",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He should give credit.",5,5,4,5,4,4.5,5,"test",TRUE,11,TRUE
+"SIM2_0452",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez added enough of his own creativity. The final piece looks very different from the original.",1,2,3,1,3.25,2.75,4,"test",TRUE,16,TRUE
+"SIM2_0453",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. He should pay Rivera.",5,5,1,3,3.5,2.75,5,"test",TRUE,21,TRUE
+"SIM2_0456",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. They should share the profits.",5,5,5,6,5,4.5,5,"test",TRUE,26,TRUE
+"SIM2_0457",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time.",3,1,5,2,3.25,2.5,5,"test",TRUE,8,TRUE
+"SIM2_0458",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,5,2,4,2.5,5,"test",TRUE,14,TRUE
+"SIM2_0459",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. An unknown photographer is hurt more by this.",4,3,3,2,3.25,4,1,"test",TRUE,16,TRUE
+"SIM2_0464",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. The final piece looks very different from the original. He should pay Rivera.",1,2,2,2,3,1.5,3,"test",TRUE,24,TRUE
+"SIM2_0465",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",4,4,3,6,3.5,1.75,2,"test",TRUE,14,TRUE
+"SIM2_0467",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez added enough of his own creativity. Martinez is famous and should know better.",5,1,1,3,3.75,2.5,2,"test",TRUE,14,TRUE
+"SIM2_0468",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","The new work is transformative enough to count as fair use.",5,3,5,2,4,1.75,5,"test",TRUE,11,TRUE
+"SIM2_0469",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income.",5,2,3,6,3.5,4.5,4,"test",TRUE,32,TRUE
+"SIM2_0470",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this.",5,5,3,6,4.5,3,5,"test",TRUE,25,TRUE
+"SIM2_0471",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Art builds on other art all the time.",5,2,2,3,3.25,1,3,"test",TRUE,8,TRUE
+"SIM2_0472",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","The new work is transformative enough to count as fair use.",4,3,3,4,2.25,1.5,3,"test",TRUE,11,TRUE
+"SIM2_0474",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. They should share the profits.",4,5,1,4,3.75,2.25,5,"test",TRUE,12,TRUE
+"SIM2_0475",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","The new work is transformative enough to count as fair use. He changed the image a lot and combined it with other images. They should share the profits.",1,1,3,1,2.25,1,2,"test",TRUE,28,TRUE
+"SIM2_0476",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","The new work is transformative enough to count as fair use. The work looks nearly identical to the photograph.",4,2,4,1,2.5,1.5,1,"test",TRUE,19,TRUE
+"SIM2_0477",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. He should give credit.",5,5,2,5,4.5,2.75,5,"test",TRUE,19,TRUE
+"SIM2_0480",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Using someone's work without consent is wrong. They should share the profits.",4,5,2,3,4,1.25,2,"test",TRUE,12,TRUE
+"SIM2_0481",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. He should give credit.",5,4,3,5,4.75,2.75,5,"test",TRUE,13,TRUE
+"SIM2_0483",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. The final piece looks very different from the original. He should pay Rivera.",3,3,3,3,3.25,2,2,"test",TRUE,21,TRUE
+"SIM2_0487",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","no",4,5,4,6,4,2.75,4,"test",TRUE,1,FALSE
+"SIM2_0489",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature.",5,5,5,6,5,3,1,"test",TRUE,17,TRUE
+"SIM2_0491",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. He should give credit.",5,5,5,4,2.25,2.5,5,"test",TRUE,13,TRUE
+"SIM2_0492",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez added enough of his own creativity. He should pay Rivera.",3,2,3,1,3.5,2,1,"test",TRUE,11,TRUE
+"SIM2_0493",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","The new work is transformative enough to count as fair use. An unknown photographer is hurt more by this.",5,2,3,1,1.5,1.25,2,"test",TRUE,19,TRUE
+"SIM2_0494",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. Martinez is famous and should know better.",5,5,1,5,4.25,4,4,"test",TRUE,23,TRUE
+"SIM2_0498",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph.",3,4,1,1,2.5,2.25,2,"test",TRUE,15,TRUE
+"SIM2_0499",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","ok",4,4,4,5,2.25,2.25,5,"test",TRUE,1,FALSE
+"SIM2_0500",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez did not ask Rivera for permission. Martinez is famous and should know better.",5,5,4,5,4,3.5,5,"test",TRUE,14,TRUE
+"SIM2_0501",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","ok",4,5,2,5,4.25,3,5,"test",TRUE,1,FALSE
+"SIM2_0502",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Martinez added enough of his own creativity. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income.",1,3,1,5,2,3.25,4,"test",TRUE,28,TRUE
+"SIM2_0503",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph.",5,5,3,4,3.75,3,4,"test",TRUE,17,TRUE
+"SIM2_0505",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income. He should pay Rivera.",5,4,3,3,3.25,2.25,3,"test",TRUE,22,TRUE
+"SIM2_0509",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. He should pay Rivera.",4,5,2,4,3.5,2.5,5,"test",TRUE,20,TRUE
+"SIM2_0510",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. He should pay Rivera.",2,4,2,2,1.75,1,1,"test",TRUE,11,TRUE
+"SIM2_0515",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. He should give credit.",3,5,2,2,2,2.25,5,"test",TRUE,11,TRUE
+"SIM2_0516",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Art builds on other art all the time. They should share the profits.",3,3,4,3,4.25,2.75,1,"test",TRUE,13,TRUE
+"SIM2_0517",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. He should pay Rivera.",5,5,2,3,3.5,2.25,4,"test",TRUE,19,TRUE
+"SIM2_0518",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong.",2,5,2,4,3.75,3.25,3,"test",TRUE,7,TRUE
+"SIM2_0519",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Using someone's work without consent is wrong. He should pay Rivera.",5,5,3,2,4.5,2.5,4,"test",TRUE,11,TRUE
+"SIM2_0520",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income. Martinez is famous and should know better.",5,5,5,3,4.75,2.75,5,"test",TRUE,23,TRUE
+"SIM2_0521",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. Martinez is famous and should know better. He should give credit.",2,4,3,6,1.75,1,4,"test",TRUE,26,TRUE
+"SIM2_0523",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez did not ask Rivera for permission. They should share the profits.",5,5,5,6,5,3.5,5,"test",TRUE,12,TRUE
+"SIM2_0524",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Art builds on other art all the time. The work looks nearly identical to the photograph.",5,2,4,3,2.5,3.25,4,"test",TRUE,16,TRUE
+"SIM2_0528",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. Rivera is a small artist and could lose income. Martinez is famous and should know better. He should give credit.",4,5,5,4,3.75,3,5,"test",TRUE,27,TRUE
+"SIM2_0529",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. Martinez is famous and should know better.",4,4,3,1,3,2.25,1,"test",TRUE,25,TRUE
+"SIM2_0530",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. They should share the profits.",3,4,1,1,3,1.5,1,"test",TRUE,12,TRUE
+"SIM2_0532",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income. He should give credit.",5,5,5,1,3,2.5,3,"test",TRUE,22,TRUE
+"SIM2_0534",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images.",4,5,5,2,4,3.5,5,"test",TRUE,19,TRUE
+"SIM2_0535",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","no",5,1,1,1,2,2,2,"test",TRUE,1,FALSE
+"SIM2_0537",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Rivera owns the photograph and should have been asked.",5,5,4,6,4,3.75,4,"test",TRUE,9,TRUE
+"SIM2_0539",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","The new work is transformative enough to count as fair use.",3,2,1,3,1.5,1.25,4,"test",TRUE,11,TRUE
+"SIM2_0542",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. He should pay Rivera.",5,5,3,5,4,2.75,5,"test",TRUE,19,TRUE
+"SIM2_0543",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph. Martinez is famous and should know better. He should give credit.",5,5,3,3,4,3.5,4,"test",TRUE,26,TRUE
+"SIM2_0544",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this. He should pay Rivera.",5,5,5,5,4.5,3.25,5,"test",TRUE,27,TRUE
+"SIM2_0546",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. He changed the image a lot and combined it with other images. He should pay Rivera.",5,5,4,1,4.5,3,4,"test",TRUE,25,TRUE
+"SIM2_0547",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. He should give credit.",5,4,4,6,4.25,4.75,5,"test",TRUE,13,TRUE
+"SIM2_0548",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. He changed the image a lot and combined it with other images. Martinez is famous and should know better.",5,4,4,5,4.25,2.5,4,"test",TRUE,26,TRUE
+"SIM2_0552",2,0.5,-0.5,0.5,"famous","famous","high","famous/famous/high","Art builds on other art all the time. The final piece looks very different from the original. He should pay Rivera.",2,3,5,3,2.5,1.75,1,"test",TRUE,21,TRUE
+"SIM2_0554",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. Rivera is a small artist and could lose income.",5,5,5,6,4.25,3.5,5,"test",TRUE,16,TRUE
+"SIM2_0556",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph. He should give credit.",1,5,1,3,2.5,1.5,3,"test",TRUE,19,TRUE
+"SIM2_0559",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Using someone's work without consent is wrong. The work looks nearly identical to the photograph.",5,5,4,6,4.25,3.25,4,"test",TRUE,15,TRUE
+"SIM2_0560",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original. An unknown photographer is hurt more by this. He should give credit.",5,5,4,4,4,3,3,"test",TRUE,28,TRUE
+"SIM2_0561",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income.",5,5,3,4,3,3.5,2,"test",TRUE,18,TRUE
+"SIM2_0562",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Art builds on other art all the time. The work looks nearly identical to the photograph. They should share the profits.",1,3,1,2,2.25,1.5,2,"test",TRUE,21,TRUE
+"SIM2_0564",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Art builds on other art all the time. They should share the profits.",4,2,5,6,4.75,4.25,3,"test",TRUE,13,TRUE
+"SIM2_0565",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. The final piece looks very different from the original. He should give credit.",5,4,4,1,4.25,2.25,4,"test",TRUE,20,TRUE
+"SIM2_0567",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Rivera owns the photograph and should have been asked. The work looks nearly identical to the photograph. An unknown photographer is hurt more by this.",5,5,5,4,4.25,3.25,5,"test",TRUE,25,TRUE
+"SIM2_0568",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Art builds on other art all the time. Rivera is a small artist and could lose income.",1,2,3,1,4,3,5,"test",TRUE,17,TRUE
+"SIM2_0569",2,0.5,0.5,0.5,"famous","unknown","high","famous/unknown/high","Using someone's work without consent is wrong. Martinez is famous and should know better. They should share the profits.",4,4,5,5,3.25,3.75,2,"test",TRUE,19,TRUE
+"SIM2_0573",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original.",3,4,2,1,2.5,2.75,4,"test",TRUE,16,TRUE
+"SIM2_0575",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez added enough of his own creativity. He should pay Rivera.",4,2,2,1,3,3.25,3,"test",TRUE,11,TRUE
+"SIM2_0580",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Rivera owns the photograph and should have been asked. The final piece looks very different from the original. He should give credit.",5,4,1,4,4,4.25,5,"test",TRUE,22,TRUE
+"SIM2_0581",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez added enough of his own creativity. Rivera is a small artist and could lose income. Martinez is famous and should know better.",2,3,5,5,4.5,3.5,4,"test",TRUE,23,TRUE
+"SIM2_0583",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Martinez added enough of his own creativity. Rivera is a small artist and could lose income.",5,3,3,6,4,3.5,2,"test",TRUE,16,TRUE
+"SIM2_0585",2,0.5,-0.5,-0.5,"famous","famous","low","famous/famous/low","Rivera owns the photograph and should have been asked. It is basically a copy with a signature. Martinez is famous and should know better. He should pay Rivera.",4,5,4,6,4.5,3.25,2,"test",TRUE,28,TRUE
+"SIM2_0586",2,-0.5,0.5,-0.5,"unknown","unknown","low","unknown/unknown/low","Rivera owns the photograph and should have been asked. Rivera is a small artist and could lose income.",5,5,2,6,3.75,4,4,"test",TRUE,18,TRUE
+"SIM2_0588",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez added enough of his own creativity. He changed the image a lot and combined it with other images. Rivera is a small artist and could lose income. He should give credit.",1,1,1,1,1.5,1.25,1,"test",TRUE,32,TRUE
+"SIM2_0589",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","The new work is transformative enough to count as fair use. The final piece looks very different from the original. He should give credit.",5,3,4,4,5,3.75,3,"test",TRUE,24,TRUE
+"SIM2_0591",2,0.5,0.5,-0.5,"famous","unknown","low","famous/unknown/low","Martinez did not ask Rivera for permission. The work looks nearly identical to the photograph.",5,5,5,5,4.75,4.5,5,"test",TRUE,15,TRUE
+"SIM2_0597",2,-0.5,-0.5,0.5,"unknown","famous","high","unknown/famous/high","Martinez did not ask Rivera for permission. The final piece looks very different from the original. They should share the profits.",5,5,2,5,3.25,3,4,"test",TRUE,21,TRUE
+"SIM2_0598",2,-0.5,0.5,0.5,"unknown","unknown","high","unknown/unknown/high","Martinez did not ask Rivera for permission. He changed the image a lot and combined it with other images.",5,4,5,5,3.75,4.5,5,"test",TRUE,19,TRUE
+"SIM2_0599",2,-0.5,-0.5,-0.5,"unknown","famous","low","unknown/famous/low","Martinez added enough of his own creativity. It is basically a copy with a signature. He should give credit.",5,3,3,4,3,3.25,5,"test",TRUE,19,TRUE

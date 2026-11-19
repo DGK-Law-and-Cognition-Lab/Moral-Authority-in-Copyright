@@ -1,0 +1,285 @@
+---
+title: "Text statistics (registered plan, Section 7)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+params:
+  mode: "simulated"
+  stage: "test"
+---
+
+<!--
+Render from the repository root, after 02_ratings_analysis.Rmd and notebooks 03-05:
+  Rscript -e 'rmarkdown::render("Analysis/06_text_statistics.Rmd", params = list(mode = "simulated"), output_dir = "Analysis/output/simulated")'
+stage = "development" runs only the development-set step (choosing the number of
+STM topics); stage = "test" runs everything. In real mode, stage = "test" stops
+unless Analysis/text_frozen/text_config.json is frozen (Section 7.1).
+-->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+root <- normalizePath(file.path(knitr::opts_knit$get("root.dir") %||% getwd(), ".."))
+if (!file.exists(file.path(root, "Analysis", "R", "config.R"))) root <- normalizePath(".")
+for (f in c("config.R", "prepare.R", "models.R", "text_stats.R")) source(file.path(root, "Analysis", "R", f))
+stopifnot(params$mode %in% c("simulated", "real"), params$stage %in% c("development", "test"))
+cfg <- jsonlite::fromJSON(file.path(root, "Analysis", "text_frozen", "text_config.json"), simplifyVector = FALSE)
+if (params$mode == "real" && params$stage == "test") {
+  if (!isTRUE(cfg$frozen)) stop("text_config.json is not frozen: the test set cannot be analyzed yet (plan, Section 7.1).")
+  dirty <- system2("git", c("-C", shQuote(root), "status", "--porcelain", "--", "Analysis/text_frozen"), stdout = TRUE)
+  if (length(dirty)) stop("Analysis/text_frozen has uncommitted changes; commit the frozen configuration first.")
+}
+REASON_CODES <- c("permission", "transformation", "nature_of_work", "amount_used", "market_effect", "profit",
+                  "credit", "nonmonetary_harm", "fame_status_power", "fairness_moral", "law_rules", "remedy")
+LEGAL_ITEMS <- c("AllowedReason", "Jury", "CostReason", "ReduceMarket")   # the four legal ratings (Section 3)
+set.seed(SEED)
+base <- file.path(root, "Analysis", "output", params$mode)
+tdir <- file.path(base, "text")
+out_dir <- file.path(tdir, "stats"); dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+save_tab <- function(x, name) { write.csv(x, file.path(out_dir, paste0(name, ".csv")), row.names = FALSE, na = ""); invisible(x) }
+show <- function(x, digits = 3) knitr::kable(x, digits = digits, row.names = FALSE)
+perms <- if (params$mode == "real") cfg$permanova_permutations else 999
+ridge_perms <- if (params$mode == "real") cfg$ridge$permutations else 20
+```
+
+**Data mode: `r params$mode`; stage: `r params$stage`.** `r if (params$mode == "simulated") "SYNTHETIC data, hashing stand-in embeddings, and a keyword stand-in coder: these results test the code only." else ""`
+
+```{r load}
+ti <- read.csv(file.path(base, "text_input.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+ti <- ti[ti$text_ok, ]
+mt <- read.csv(file.path(tdir, "masked_texts.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+ti$masked <- mt$masked[match(ti$pid, mt$pid)]
+ti$t[ti$study == 1] <- NA
+sets <- list(
+  study2_test = ti$study == 2 & ti$text_set == "test" & ti$analyzed,
+  study2_all  = ti$study == 2 & ti$analyzed,
+  study1      = ti$study == 1
+)
+```
+
+```{r development, eval = params$stage == "development"}
+# Development stage: choose the number of STM topics on the development set (Section 7.6).
+dev <- ti[ti$text_set == "dev", ]
+dev$t0 <- ifelse(is.na(dev$t), 0, dev$t); meta <- data.frame(a = dev$a, v = dev$v, t = dev$t0, study = factor(dev$study))
+sk <- stm_search_K(dev$masked, meta, unlist(cfg$stm$K_candidates), SEED)
+save_tab(sk, "stm_searchK_development")
+show(sk)
+```
+
+```{r stop_if_dev, eval = params$stage == "development"}
+knitr::knit_exit()
+```
+
+# T1-T3: do explanations differ by condition? (planned tests, test set)
+
+PERMANOVA on cosine distances between masked-text embeddings, main effects tested marginally (`r perms` permutations), with a dispersion test beside each. Holm across T1-T3 on the primary model. Supported if Holm-adjusted p < .05 with the primary model and p < .05 with at least two of the three check models.
+
+```{r T}
+test <- ti[sets$study2_test, ]
+models <- c(cfg$embedding_models$primary$key, vapply(cfg$embedding_models$checks, function(m) m$key, ""))
+TT <- do.call(rbind, lapply(models, function(k) {
+  X <- read_embeddings(file.path(tdir, "embeddings"), k, "masked", test$pid)
+  cbind(model = k, permanova_T(X, test, perms, SEED))
+}))
+prim <- TT$model == models[1]
+TT$p_holm <- NA; TT$p_holm[prim] <- p.adjust(TT$p[prim], "holm")
+checks_sig <- sapply(c("T1", "T2", "T3"), function(T) sum(TT$p[!prim & TT$test == T] < ALPHA))
+TT$supported <- NA
+TT$supported[prim] <- TT$p_holm[prim] < ALPHA & checks_sig[TT$test[prim]] >= 2
+dec <- file.path(tdir, "decoding_T1_T3.csv")
+if (file.exists(dec) && file.info(dec)$size > 5) {
+  d <- read.csv(dec, stringsAsFactors = FALSE)
+  TT <- merge(TT, d[, c("model", "factor", "accuracy", "chance", "permutation_p")], by = c("model", "factor"), all.x = TRUE)
+}
+TT <- TT[order(TT$test, match(TT$model, models)), ]
+show(save_tab(TT, "T1_T3_permanova"))
+```
+
+Exploratory: interactions, and the same tests on the raw (unmasked) text.
+
+```{r T_explore}
+inter <- do.call(rbind, lapply(models, function(k) cbind(model = k,
+  permanova_interactions(read_embeddings(file.path(tdir, "embeddings"), k, "masked", test$pid), test, perms, SEED))))
+save_tab(inter, "T_interactions_exploratory")
+raw <- do.call(rbind, lapply(models, function(k) cbind(model = k, version = "raw",
+  permanova_T(read_embeddings(file.path(tdir, "embeddings"), k, "raw", test$pid), test, perms, SEED))))
+show(save_tab(raw, "T1_T3_raw_text_exploratory"))
+```
+
+# Reason codes (exploratory)
+
+Categories retained by the reliability gate (Section 7.5). Firth logistic regression with the study's factors; BH across categories and terms within each sample. Primary coder, then each check coder.
+
+```{r codes}
+gate <- jsonlite::fromJSON(file.path(tdir, "coding", "retained_categories.json"))
+if (params$mode == "real" && !(isTRUE(gate$dev_gate_applied) && isTRUE(gate$test_gate_applied)))
+  stop("The reliability gate (development and test-set checks, Section 7.5) has not been applied.")
+ret <- intersect(unlist(gate$retained), REASON_CODES)      # stance is never a reason code
+coders <- c("gptoss", "claude", "gemini")
+code_tabs <- list()
+for (cd in coders) {
+  codes <- read.csv(file.path(tdir, "coding", sprintf("codes_%s.csv", cd)), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+  for (sn in names(sets)) {
+    s <- ti[sets[[sn]], ]; st <- if (sn == "study1") 1 else 2
+    cc <- codes[match(s$pid, codes$pid), ]
+    tab <- do.call(rbind, lapply(ret, function(k) firth_terms(as.logical(cc[[k]]), s, st, label = k)))
+    tab$coder <- cd; tab$sample <- sn
+    tab$q_bh <- p.adjust(tab$p, "BH")
+    code_tabs[[paste(cd, sn)]] <- tab
+  }
+}
+codes_all <- do.call(rbind, code_tabs)
+save_tab(codes_all, "reason_codes_firth")
+show(codes_all[codes_all$coder == "gptoss" & codes_all$sample == "study2_test",
+               c("code", "term", "prevalence", "estimate", "ci_low", "ci_high", "p", "q_bh")])
+```
+
+# Uptake (exploratory)
+
+```{r uptake}
+feat <- read.csv(file.path(tdir, "features.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+f2 <- function(s) feat[match(s$pid, feat$pid), ]
+up <- do.call(rbind, lapply(names(sets), function(sn) {
+  s <- ti[sets[[sn]], ]; ff <- f2(s); st <- if (sn == "study1") 1 else 2
+  rbind(cbind(sample = sn, firth_terms(as.logical(ff$uptake_fame), s, st, label = "mentions fame/status")),
+        if (st == 2) cbind(sample = sn, firth_terms(as.logical(ff$uptake_change), s, st, label = "mentions change")))
+}))
+up$q_bh <- p.adjust(up$p, "BH")
+show(save_tab(up, "uptake_firth"))
+share <- do.call(rbind, lapply(c("artist", "victim", "transform"), function(f) {
+  s <- ti[sets$study2_all, ]; ff <- f2(s)
+  x <- data.frame(level = s[[f]], fame = as.numeric(as.logical(ff$uptake_fame)), change = as.numeric(as.logical(ff$uptake_change)))
+  cbind(factor = f, aggregate(cbind(fame, change) ~ level, data = x, FUN = mean))
+}))
+save_tab(share, "uptake_shares_study2")
+```
+
+# Word measures, passive voice, dictionaries, semantic axes (exploratory)
+
+```{r words}
+wl <- grep("^count_", names(feat), value = TRUE)
+wm <- do.call(rbind, lapply(names(sets), function(sn) {
+  s <- ti[sets[[sn]], ]; ff <- f2(s); st <- if (sn == "study1") 1 else 2
+  r <- rbind(do.call(rbind, lapply(wl, function(w) count_model(ff[[w]], ff$n_tokens, s, st, sub("^count_", "", w)))),
+             passive_model(ff$passive_clauses, ff$clauses, s, st))
+  cbind(sample = sn, r)
+}))
+wm$q_bh <- ave(wm$p, wm$sample, FUN = function(p) p.adjust(p, "BH"))
+show(save_tab(wm[wm$sample == "study2_test", ], "word_measures"))
+save_tab(wm, "word_measures_all_samples")
+dict_cols <- grep("^(mfd2_|emfd_)", names(feat), value = TRUE)
+if (length(dict_cols)) {
+  dm <- do.call(rbind, lapply(names(sets), function(sn) {
+    s <- ti[sets[[sn]], ]; ff <- f2(s); st <- if (sn == "study1") 1 else 2
+    do.call(rbind, lapply(dict_cols, function(dc) { s$y_ <- ff[[dc]]; cbind(sample = sn, coef_table(fit_lm(s, "y_", st), st, dc)) }))
+  }))
+  save_tab(dm, "moral_dictionaries")
+}
+ddr <- read.csv(file.path(tdir, "ddr_scores.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+dd <- do.call(rbind, lapply(names(sets), function(sn) {
+  s <- ti[sets[[sn]], ]; st <- if (sn == "study1") 1 else 2; dr <- ddr[match(s$pid, ddr$pid), ]
+  do.call(rbind, lapply(setdiff(names(ddr), "pid"), function(ax) { s$y_ <- dr[[ax]]; cbind(sample = sn, coef_table(fit_lm(s, "y_", st), st, ax)) }))
+}))
+save_tab(dd, "semantic_axes")
+```
+
+# Party focus (exploratory)
+
+How often each party is named (negative binomial with a log(words) offset), and whether the primary coder judged the explanation negative toward each party, among explanations that mention that party (Firth logistic).
+
+```{r party}
+codes_p <- read.csv(file.path(tdir, "coding", "codes_gptoss.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+pf <- do.call(rbind, lapply(names(sets), function(sn) {
+  s <- ti[sets[[sn]], ]; ff <- f2(s); st <- if (sn == "study1") 1 else 2; cp <- codes_p[match(s$pid, codes_p$pid), ]
+  rbind(cbind(sample = sn, count_model(ff$mentions_martinez, ff$n_tokens, s, st, "mentions of Martinez"))[, c("sample", "feature", "term", "n", "estimate", "p")],
+        cbind(sample = sn, count_model(ff$mentions_rivera, ff$n_tokens, s, st, "mentions of Rivera"))[, c("sample", "feature", "term", "n", "estimate", "p")],
+        do.call(rbind, lapply(c("martinez", "rivera"), function(pty) {
+          sent <- cp[[paste0("sentiment_", pty)]]; k <- !is.na(sent) & sent != "not_mentioned"
+          r <- firth_terms(sent[k] == "negative", s[k, ], st, label = paste("negative toward", pty))
+          data.frame(sample = sn, feature = r$code, term = r$term, n = r$n, estimate = r$estimate, p = r$p)
+        })))
+}))
+pf$q_bh <- ave(pf$p, pf$sample, FUN = function(p) p.adjust(p, "BH"))
+show(save_tab(pf, "party_focus"))
+```
+
+# Topics (exploratory)
+
+```{r topics}
+K <- cfg$stm$K
+if (is.null(K)) { if (params$mode == "real") stop("Set stm$K on the development set before the test stage."); K <- 5 }
+ana <- ti[ti$analyzed, ]; ana$t0 <- ifelse(is.na(ana$t), 0, ana$t)
+st <- stm_effects(ana$masked, data.frame(a = ana$a, v = ana$v, t = ana$t0, study = factor(ana$study)), K, SEED)
+save_tab(st$effects, "stm_effects"); save_tab(st$words, "stm_topic_words")
+show(st$words)
+bt <- file.path(tdir, "bertopic_assignments.csv")
+if (file.exists(bt)) {
+  b <- read.csv(bt, stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+  s <- ti[sets$study2_all, ]; tp <- b[match(s$pid, b$pid), 2]
+  save_tab(as.data.frame(table(topic = tp, transform = s$transform)), "bertopic_by_transform_study2")
+}
+```
+
+# Linking explanations to ratings (exploratory)
+
+```{r ridge}
+rr <- do.call(rbind, lapply(c("study2_all", "study1"), function(sn) do.call(rbind, lapply(c("raw", "masked"), function(ver) {
+  s <- ti[sets[[sn]], ]
+  X <- read_embeddings(file.path(tdir, "embeddings"), models[1], ver, s$pid)
+  do.call(rbind, lapply(PRIMARY, function(o) cbind(sample = sn, text = ver, outcome = o,
+    ridge_table(X, s[[o]], cfg$ridge$folds, if (params$mode == "real") cfg$ridge$bootstrap else 200, ridge_perms, SEED, models[1]))))
+}))))
+show(save_tab(rr, "ridge_verdict"))
+```
+
+```{r stance}
+codes <- read.csv(file.path(tdir, "coding", "codes_gptoss.csv"), stringsAsFactors = FALSE, colClasses = c(pid = "character"))
+s <- ti[sets$study2_all, ]; cc <- codes[match(s$pid, codes$pid), ]
+verdict <- ifelse(s$Jury >= 4, "favors_rivera", ifelse(s$Jury <= 2, "favors_martinez", "mixed_or_unclear"))
+s$stance_agrees <- cc$stance == verdict
+show(save_tab(aggregate(stance_agrees ~ cell, data = s, FUN = mean), "stance_verdict_agreement_by_cell"))
+save_tab(cbind(sample = "study2_all", firth_terms(s$stance_agrees, s, 2, label = "stance agrees with Jury")), "stance_verdict_firth")
+rbv <- do.call(rbind, lapply(ret, function(k) {
+  x <- data.frame(verdict = verdict, has = as.numeric(as.logical(cc[[k]])))
+  cbind(code = k, aggregate(has ~ verdict, data = x, FUN = mean))
+}))
+save_tab(rbv, "reasons_by_verdict")
+beyond <- do.call(rbind, lapply(ret, function(k) firth_terms(as.logical(cc[[k]]), s, 2, covars = c("AllowedReason", "Jury"), label = k)))
+beyond$q_bh <- p.adjust(beyond$p, "BH")
+save_tab(beyond, "reasons_beyond_verdict")
+# Reasons built only from codes that passed the gate (Section 7.5).
+reason_sets <- list(reason_harm = intersect(c("nonmonetary_harm", "market_effect"), ret),
+                    reason_fair = intersect("fairness_moral", ret), reason_perm = intersect("permission", ret))
+reason_sets <- reason_sets[lengths(reason_sets) > 0]
+for (nm in names(reason_sets))
+  s[[nm]] <- as.integer(Reduce(`|`, lapply(reason_sets[[nm]], function(k) as.logical(cc[[k]]))))
+later <- if (!length(reason_sets)) NULL else do.call(rbind, lapply(c("Harm", "Moral", "Payment"), function(o) {
+  k <- names(reason_sets)
+  f <- lm(stats::as.formula(paste(o, "~ a * v * t +", paste(LEGAL_ITEMS, collapse = " + "), "+", paste(k, collapse = " + "))), data = s)
+  V <- sandwich::vcovHC(f, type = "HC3")
+  data.frame(outcome = o, reason = k, estimate = coef(f)[k], se_hc3 = sqrt(diag(V))[k],
+             p = 2 * pt(-abs(coef(f)[k] / sqrt(diag(V))[k]), f$df.residual), n = nobs(f))
+}))
+if (!is.null(later)) show(save_tab(later, "reasons_predict_later_ratings")) else cat("No harm, fairness, or permission code passed the gate.\n")
+```
+
+```{r matching}
+rt <- file.path(base, "ratings", "study2_all_terms.csv")
+if (file.exists(rt)) {
+  r2 <- read.csv(rt, stringsAsFactors = FALSE)
+  pairs <- data.frame(outcome = c("Harm", "Harm", "Payment", "Moral", "AllowedReason", "AllowedReason"),
+                      code = c("nonmonetary_harm", "market_effect", "remedy", "fairness_moral", "permission", "transformation"))
+  pairs <- pairs[pairs$code %in% ret, ]
+  ct <- codes_all[codes_all$coder == "gptoss" & codes_all$sample == "study2_all", ]
+  m <- do.call(rbind, lapply(seq_len(nrow(pairs)), function(i) do.call(rbind, lapply(c("a", "v", "t"), function(tm) {
+    rr_ <- r2[r2$outcome == pairs$outcome[i] & r2$term == tm, ]; cr <- ct[ct$code == pairs$code[i] & ct$term == tm, ]
+    data.frame(term = tm, rating = pairs$outcome[i], rating_estimate = rr_$estimate, rating_p = rr_$p,
+               text_code = pairs$code[i], text_log_odds = cr$estimate, text_p = cr$p)
+  }))))
+  show(save_tab(m, "matching_effects"))
+}
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_dir, "sessionInfo.txt"))
+```

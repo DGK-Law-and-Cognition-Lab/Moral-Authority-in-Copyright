@@ -1,0 +1,36 @@
+{
+  "_about": "Semantic axes (registered plan, Section 7.6; distributed dictionary representations). DRAFT anchor sentences, written from theory; finalized on the development set and frozen before the test set. Score = cos(response, mean of pole A) - cos(response, mean of pole B).",
+  "frozen": false,
+  "axes": {
+    "harm_vs_freedom": {
+      "pole_a": ["The photographer was harmed by having his work taken.",
+                 "Rivera lost money and recognition because of this.",
+                 "Using the photo hurt the original creator.",
+                 "The original artist deserves protection from this kind of copying."],
+      "pole_b": ["Artists should be free to build on other people's work.",
+                 "Creative reuse of images is how art moves forward.",
+                 "Martinez should be free to make new art from existing material.",
+                 "Restricting this use would stifle creativity."]
+    },
+    "law_vs_fairness": {
+      "pole_a": ["Copyright law says you cannot use someone's photo without permission.",
+                 "Under the legal rules this is infringement.",
+                 "Fair use is a legal standard that this use does not meet.",
+                 "The law protects the copyright holder here."],
+      "pole_b": ["It is simply unfair to take someone else's work.",
+                 "This is morally wrong regardless of the law.",
+                 "It is not right to profit from another person's effort.",
+                 "Treating Rivera this way is unjust."]
+    },
+    "permission_vs_transformation": {
+      "pole_a": ["He should have asked for permission first.",
+                 "Martinez needed Rivera's consent to use the photo.",
+                 "Using it without asking is the problem.",
+                 "Permission was never given."],
+      "pole_b": ["The new artwork is different enough from the original.",
+                 "Martinez changed the photograph substantially.",
+                 "The work is transformative and creates something new.",
+                 "How much the image was altered is what matters."]
+    }
+  }
+}

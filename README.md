@@ -2,9 +2,9 @@
 
 Materials, de-identified data, and analysis code for two experiments by David G. Kamper, Becca Bedell, and Keith J. Holyoak (manuscript in preparation).
 
-Courts treat fair use as a question about the work: how much the new work transforms the original, and whether it harms the original's market. Two vignette experiments ask whether ordinary people also weigh who the parties are. A visual artist, Alex Martinez, makes and sells prints of a new artwork built from a landscape photograph by Jamie Rivera, without permission. **Study 1** (N = 276 recorded, 246 included) crosses the artist's fame with the photographer's fame. **Study 2** (N = 599 recorded, 403 included) adds how much Martinez transformed the photograph. Participants were UCLA undergraduates who took part for course credit in October and November 2025.
+Courts treat fair use as a question about the work: how much the new work transforms the original, and whether it harms the original's market. Two vignette experiments ask whether ordinary people also weigh who the parties are. A visual artist, Alex Martinez, makes and sells prints of a new artwork built from a landscape photograph by Jamie Rivera, without permission. **Study 1** (276 recorded responses, 228 analyzed) crosses the artist's fame with the photographer's fame. **Study 2** (599 recorded responses, 261 analyzed after removing repeat responses) adds how much Martinez transformed the photograph. Participants were UCLA undergraduates who took part for course credit in October and November 2025.
 
-**Status.** The analysis plan was written after data collection and before any analysis of the final data, and registered on OSF on 19 November 2026: <https://osf.io/pj25c>. The analysis code will be committed here, tested on simulated data, before it is run on the real data.
+**Status.** The analysis plan was written after data collection and before any analysis of the final data, and registered on OSF on 19 November 2026: <https://osf.io/pj25c> (under embargo until publication). The analysis code below was committed, and run on simulated data, before it was run on the real data, as the plan requires. The text analyses also have a development stage (Section 7.1 of the plan): their choices are frozen in `Analysis/text_frozen/` before the test set is analyzed.
 
 ## What is in this repository
 
@@ -13,7 +13,32 @@ Courts treat fair use as a question about the work: how much the new work transf
 | `Docs/Preregistration/` | The registered analysis plan: `Analysis_Plan_v1.1_registered.pdf` is the file uploaded to OSF (SHA-256 `57bc2a36367ff0dbb9e6f71341a3d1f27fdfebd19850bfd17a36680a20afaf6a`), and the `.md` file is its source. The registered copy is blinded for peer review. |
 | `Experiment/` | Both Qualtrics surveys as exported (`.qsf`), with the SONA credit token and the Qualtrics account id replaced by `REDACTED`, and a printout of the Study 1 survey (`Stimuli/`). |
 | `Data/` | One de-identified response file per study (`StudyN_deidentified.csv`, one row per recorded response, before any exclusions) and a codebook per study (`StudyN_codebook.csv`: column name, Qualtrics export name, ImportId, and question text). |
-| `Analysis/` | `00_deidentify.R`, which produced the files in `Data/` from the raw exports. The registered analysis scripts follow. |
+| `Analysis/` | The analysis code (see below). |
+
+## Analysis code
+
+Run from the repository root, in this order. Every step takes a mode: `simulated` (synthetic data with planted effects, used to test the code) or `real`.
+
+| Step | File | What it does |
+|---|---|---|
+| 0 | `Analysis/00_deidentify.R` | Produced `Data/` from the raw exports (needs the raw files; not rerun by users). |
+| 1 | `Analysis/01_simulate_data.R` | Writes synthetic data with the real files' columns and codes to `Analysis/simulated/`. |
+| 2 | `Analysis/02_ratings_analysis.Rmd` | Sections 5–6 of the plan: participant flow, attrition, confirmatory tests C1–C5, all terms for every outcome, ordinal models, pooled fame effects, post-outcome perceptions, robustness checks, moderators. Writes `text_input.csv` for the text steps. |
+| 3 | `Analysis/notebooks/03_text_features.ipynb` | Section 7: masking, uptake, word measures, passive voice, moral dictionaries, data-quality flags, words that separate conditions (CPU). |
+| 4 | `Analysis/notebooks/04_text_embeddings.ipynb` | Embeddings from four models, semantic axes, the decoding classifier for T1–T3, BERTopic (Colab GPU; Gemini and Voyage APIs). |
+| 5 | `Analysis/notebooks/05_text_llm_coding.ipynb` | Reason, stance and sentiment codes from `gpt-oss` (vLLM, batch-invariant) and from Claude and Gemini (three runs each); agreement and the human-reliability gate. |
+| 6 | `Analysis/06_text_statistics.Rmd` | T1–T3 (PERMANOVA), reason codes, uptake, word measures, semantic axes, topics (STM), and links between explanations and ratings. |
+
+Shared code is in `Analysis/R/` (`config.R` holds every constant fixed by the plan) and `Analysis/python/textlib.py`. The text analyses' development stage, the human-coding files, and the freeze step (`Analysis/python/freeze_text_config.py`) are described in `Analysis/text_frozen/README.md`; until the freeze, real-mode text runs touch only the development set. Tests: `Rscript -e 'testthat::test_dir("Analysis/tests")'` and `python3 -m pytest Analysis/tests`. The notebooks are generated by `Analysis/notebooks/_build_notebooks.py`; edit that file, not the notebooks. Outputs go to `Analysis/output/<mode>/`; the simulated run is committed so the code's behavior can be checked.
+
+Example (simulated mode):
+
+```
+Rscript Analysis/01_simulate_data.R
+Rscript -e 'rmarkdown::render("Analysis/02_ratings_analysis.Rmd", params = list(mode = "simulated"), output_dir = "Analysis/output/simulated")'
+# run notebooks 03-05 with MODE = "simulated"
+Rscript -e 'rmarkdown::render("Analysis/06_text_statistics.Rmd", params = list(mode = "simulated"), output_dir = "Analysis/output/simulated")'
+```
 
 ## Reading the data files
 

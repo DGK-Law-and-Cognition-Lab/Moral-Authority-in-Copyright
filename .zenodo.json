@@ -26,5 +26,12 @@
     "legal judgment",
     "transformation",
     "status"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://osf.io/pj25c",
+      "relation": "references",
+      "resource_type": "other"
+    }
   ]
 }

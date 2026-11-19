@@ -1,0 +1,326 @@
+{
+  "_about": "Development-stage choices for the text analyses (registered plan, Section 7). Every value here is a DRAFT until it is finalized on the development set (all of Study 1 and the Study 2 responses in the 2025 interim file) and committed with frozen = true and a date, BEFORE any test-set analysis. In real mode the notebooks and 06_text_statistics.Rmd refuse to analyze the test set while frozen is false.",
+  "frozen": false,
+  "frozen_date": null,
+  "frozen_commit_note": "",
+  "min_words": 3,
+  "masking": {
+    "_about": "Section 7.2. Replaced by the mask token in the masked copy; whole words, case-insensitive, longer phrases first.",
+    "token": "[MASK]",
+    "fame_terms": [
+      "world-renowned",
+      "world renowned",
+      "renowned",
+      "famous",
+      "fame",
+      "well-known",
+      "well known",
+      "celebrated",
+      "influential",
+      "unknown",
+      "relatively unknown",
+      "large following",
+      "small following",
+      "big following",
+      "major international museums",
+      "international museums",
+      "small local galleries",
+      "local galleries",
+      "world-famous",
+      "world famous"
+    ],
+    "transformation_phrases": [
+      "15 other images",
+      "fifteen other images",
+      "one element in a larger work",
+      "paintings and digital alterations",
+      "significantly changed the colors and composition",
+      "looked very different",
+      "nearly identical",
+      "minor brightness adjustments",
+      "small text signature",
+      "complete photograph",
+      "changed the colors of rivera's photograph and added text over it"
+    ]
+  },
+  "uptake": {
+    "_about": "Section 7.6. Whether the RAW explanation mentions fame or status, or how much the work was changed. Words that occur in most explanations regardless of condition (e.g. 'original') are left out; the lists are settled on the development set from word frequencies only, never from differences between conditions.",
+    "fame_status": [
+      "famous",
+      "fame",
+      "renowned",
+      "well-known",
+      "well known",
+      "celebrated",
+      "influential",
+      "unknown",
+      "following",
+      "popular",
+      "status",
+      "big name",
+      "established",
+      "prominent",
+      "small artist",
+      "smaller artist",
+      "bigger artist",
+      "notable",
+      "recognized",
+      "prestige",
+      "prestigious",
+      "world-famous"
+    ],
+    "change": [
+      "changed",
+      "change",
+      "changes",
+      "changing",
+      "different",
+      "difference",
+      "transform",
+      "transformed",
+      "transformative",
+      "transformation",
+      "altered",
+      "alter",
+      "alteration",
+      "modified",
+      "modify",
+      "edited",
+      "edit",
+      "identical",
+      "similar",
+      "copy",
+      "copied",
+      "copying",
+      "unique",
+      "new work",
+      "significantly",
+      "brightness",
+      "collage",
+      "combined"
+    ]
+  },
+  "word_lists": {
+    "_about": "Section 7.6. Whole-word, case-insensitive; phrases matched before single words; no word counted twice. Causal and counterargument lists are as registered (bare 'as' and 'to' dropped).",
+    "causal": [
+      "because",
+      "since",
+      "therefore",
+      "thus",
+      "hence",
+      "consequently",
+      "as a result",
+      "due to",
+      "lead to",
+      "leads to",
+      "led to",
+      "result in",
+      "results in",
+      "cause",
+      "caused",
+      "causing",
+      "so that",
+      "reason"
+    ],
+    "counterargument": [
+      "however",
+      "although",
+      "but",
+      "on the other hand",
+      "despite"
+    ],
+    "hedging": [
+      "maybe",
+      "perhaps",
+      "possibly",
+      "might",
+      "probably",
+      "seems",
+      "seem",
+      "somewhat",
+      "i think",
+      "i believe",
+      "i feel",
+      "unsure",
+      "not sure",
+      "uncertain",
+      "likely",
+      "kind of",
+      "sort of"
+    ],
+    "certainty": [
+      "definitely",
+      "clearly",
+      "obviously",
+      "certainly",
+      "absolutely",
+      "undeniably",
+      "of course",
+      "without a doubt",
+      "no doubt",
+      "always",
+      "never",
+      "must"
+    ],
+    "counterfactual": [
+      "if he had",
+      "if she had",
+      "if they had",
+      "if martinez had",
+      "had he",
+      "had martinez",
+      "should have",
+      "could have",
+      "would have",
+      "if he asked",
+      "if he would have",
+      "if he would've",
+      "should've",
+      "could've",
+      "would've"
+    ]
+  },
+  "vignette_source": "Read from the condition blocks and TransformText values in Experiment/Study1_FairUseAuthority.qsf and Experiment/Study2_FairUseAuthority.qsf (textlib.vignette_texts).",
+  "copy_check_ngram": 5,
+  "copy_check_threshold": 0.5,
+  "embedding_models": {
+    "_about": "Section 7.3. Revisions are pinned when frozen. Vectors are saved under Analysis/output/<mode>/text/embeddings/.",
+    "primary": {
+      "key": "qwen3_8b",
+      "provider": "sentence-transformers",
+      "id": "Qwen/Qwen3-Embedding-8B",
+      "revision": null
+    },
+    "checks": [
+      {
+        "key": "gemini2",
+        "provider": "google",
+        "id": "gemini-embedding-2",
+        "task_type": "SEMANTIC_SIMILARITY"
+      },
+      {
+        "key": "voyage4l",
+        "provider": "voyage",
+        "id": "voyage-4-large",
+        "input_type": "document"
+      },
+      {
+        "key": "mpnet",
+        "provider": "sentence-transformers",
+        "id": "sentence-transformers/all-mpnet-base-v2",
+        "revision": null
+      }
+    ]
+  },
+  "llm_coders": {
+    "_about": "Section 7.5. Exact IDs and settings are committed before coding begins.",
+    "primary": {
+      "key": "gptoss",
+      "provider": "vllm",
+      "id": "openai/gpt-oss-120b",
+      "fallback_id": "openai/gpt-oss-20b",
+      "revision": null,
+      "seed": 2025,
+      "temperature": 0.0,
+      "batch_invariant": true,
+      "max_tokens": 4096,
+      "runs": 1
+    },
+    "checks": [
+      {
+        "key": "claude",
+        "provider": "anthropic",
+        "id": "claude-opus-5-5",
+        "effort": "low",
+        "max_tokens": 4000,
+        "runs": 3
+      },
+      {
+        "key": "gemini",
+        "provider": "google",
+        "id": null,
+        "runs": 3
+      }
+    ]
+  },
+  "decoding": {
+    "folds": 10,
+    "repeats": 10,
+    "n_permutations": 1000,
+    "C": 1.0
+  },
+  "permanova_permutations": 9999,
+  "stm": {
+    "K": null,
+    "K_candidates": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "_about": "Section 7.6. Fit to Study 1 and Study 2 together on the masked text; prevalence ~ a + v + t + study, where t is 0 for Study 1. K is chosen on the development set (06_text_statistics.Rmd with stage = 'development') and written here before freezing."
+  },
+  "bertopic": {
+    "min_topic_size": 10,
+    "seeds": [
+      2025,
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034
+    ]
+  },
+  "dictionaries": {
+    "_about": "Section 7.6. Place the official files in Analysis/text_frozen/dictionaries/ and record their source and SHA-256 here before freezing.",
+    "mfd2": {
+      "file": "dictionaries/mfd2.0.dic",
+      "source": null,
+      "sha256": null
+    },
+    "emfd": {
+      "file": "dictionaries/emfd_scoring.csv",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "seed": 2025,
+  "ridge": {
+    "_about": "Section 7.7. Ridge regression (glmnet, alpha = 0) from embeddings to each primary rating; out-of-sample R^2 from cv.glmnet's held-out (prevalidated) predictions at lambda.min; bootstrap CI over held-out predictions; the same procedure on permuted ratings gives the baseline.",
+    "folds": 10,
+    "bootstrap": 1000,
+    "permutations": 200
+  },
+  "party_terms": {
+    "_about": "Section 7.6, party focus: how often each party is named. Draft; settled on the development set.",
+    "martinez": [
+      "martinez",
+      "alex"
+    ],
+    "rivera": [
+      "rivera",
+      "jamie"
+    ]
+  },
+  "frozen_files_sha256": {
+    "_about": "Filled in when the configuration is frozen; textlib.freeze_check verifies these.",
+    "codebook.md": null,
+    "anchors.json": null
+  },
+  "human_coding_files": {
+    "_about": "Section 7.5. Placed in Analysis/text_frozen/ (they contain only de-identified text ids and codes).",
+    "dev_independent": "human_codes_dev.csv (pid, coder, the 12 codes as 0/1, stance)",
+    "dev_consensus": "human_codes_dev_consensus.csv (pid, the 12 codes, stance), resolved by discussion",
+    "test_check": "human_codes_test.csv (pid, the 12 codes, stance), one coder, 100 random test responses"
+  }
+}
