@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use these materials, data, or code, please cite the archived release and the article."
+title: "Fame, Transformation, and Lay Judgments of Fair Use: materials, de-identified data, and analysis code"
+type: dataset
+authors:
+  - family-names: Kamper
+    given-names: David G.
+    affiliation: "University of California, Los Angeles; University of Chicago Law School"
+  - family-names: Bedell
+    given-names: Becca
+    affiliation: University of California, Los Angeles
+  - family-names: Holyoak
+    given-names: Keith J.
+    affiliation: University of California, Los Angeles
+license: MIT
+repository-code: "https://github.com/DGK-Law-and-Cognition-Lab/Moral-Authority-in-Copyright"
+keywords:
+  - copyright
+  - fair use
+  - moral judgment
+  - legal judgment
+  - transformation
+  - status

@@ -1,0 +1,27 @@
+# OS and editor
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Never commit secrets
+.env
+*.key
+
+# Raw exports and anything that links data to people
+Data/raw/
+**/Private*/
+**/*_id_key.csv
+**/*free_text_flags*.csv
+**/*Values*.csv
+**/*Labeled*.csv
+**/*Labels*.csv
+
+# Knit reports, caches, simulated runs
+Analysis/**/*.html
+Analysis/**/*_cache/
+Analysis/**/*_files/
+Analysis/simulated_run/

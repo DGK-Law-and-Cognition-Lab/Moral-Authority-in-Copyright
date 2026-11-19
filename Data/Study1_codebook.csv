@@ -1,0 +1,71 @@
+column,export_name,import_id,question_text
+pid,,,Participant id assigned at de-identification
+StartDate,StartDate,startDate,Start Date
+QualtricsStatus,Status,status,Response Type
+Progress,Progress,progress,Progress
+Duration (in seconds),Duration (in seconds),duration,Duration (in seconds)
+Finished,Finished,finished,Finished
+Consent,Consent,QID1720292887,"CONSENT FORM You are invited to participate in a research study on human thinking and artistic and aesthetic judgment, conducted by Dr. Keith J. Holyoak, of the Department of Psychology at UCLA. You were selected as a possible participant in this study because you are 18 years of age or older. Purpose of Study The purpose of the study is to understand human artistic perception and cognition. Procedures Involved in Study If you agree to participate, you may receive a demographic questionnaire to collect information on your age, gender, language, and artistic background. You may be presented with different types of visual art and asked to answer simple questions and/or perform simple tasks by interacting with a website via a keyboard or a computer mouse. Your responses will be recorded by the computer and will not be identified with you in any way. The session will take less than 60 minutes. Potential Risks and Discomforts There is no known risk or discomfort in this study. If you experience any discomfort during the experiment, you can stop at any time and notify the experimenter. Potential Benefits to Subject There are no direct benefits from participating in this study. Potential Benefits to Society The findings of the study will help us understand how humans perceive and understand aesthetic judgements in the law. By understanding the processes underlying human perception, we can better consider the fundamentals of copyright and the burgeoning field of AI art. Payment for Participation You will receive 0.5 to 1 hour of credit for your psychology class if you signed up for the study through the UCLA Psychology Department Subject Pool; otherwise, you will receive payment at the rate of $16 per hour for your participation. Alternatives to Participation An alternative to participating in this project and fulfilling Psychology 10 requirements is to participate in other research or to do an equivalent classroom project. Confidentiality Your identity in this study will be treated as confidential. The results of the study, including laboratory or any other data, may be published for scientific purposes but will not include any identifiable references to you. Your data, including de-identified data, may be kept for use in future research. After the experiment has finished running, all contact information will be destroyed. Only the researchers will have access to registration and data files. The data files that you submit will be stored for 5 years. The researchers will do their best to ensure that your private information is kept confidential. Information about you will be handled as confidentially as possible, but participating in research may involve a loss of privacy and the potential for a breach in confidentiality. Study data will be physically and electronically secured. As with any use of electronic means to store data, there is a risk of breach of data security. Participation and Withdrawal Your participation is VOLUNTARY. You may withdraw from the experiment at any time without suffering any negative consequences. You may refuse to answer any questions that you do not want to answer and remain in the study. Identification of Investigators If you have any questions, feel free to contact Co-Principal Investigator David G. Kamper (davidgkamper@ucla.edu) or Principal Investigator Keith Holyoak (kholyoak@g.ucla.edu) at the Department of Psychology, UCLA, 405 Hilgard Ave., Los Angeles, CA 90095-1563. Rights of Research Subjects You may withdraw your consent at any time and discontinue participation without penalty. You are not waiving any legal claims, rights, or remedies because of your participation in this research study. UCLA Office of the Human Research Protection Program (OHRPP) If you have questions about your rights as a research subject, or you have concerns or suggestions and you want to talk to someone other than the researchers, you may contact the UCLA OHRPP by phone: (310) 206-2040; by email: participants@research.ucla.edu or by mail: Box 951406, Los Angeles, CA 90095-1406."
+AttentionCheck1,AttentionCheck1,QID13,What is your task in this experiment?
+TimeFamousFamous_First Click,TimeFamousFamous_First Click,QID54_FIRST_CLICK,Timing - First Click
+TimeFamousFamous_Last Click,TimeFamousFamous_Last Click,QID54_LAST_CLICK,Timing - Last Click
+TimeFamousFamous_Page Submit,TimeFamousFamous_Page Submit,QID54_PAGE_SUBMIT,Timing - Page Submit
+TimeFamousFamous_Click Count,TimeFamousFamous_Click Count,QID54_CLICK_COUNT,Timing - Click Count
+WhoNewCheck,WhoNewCheck,QID16,Who created the new artwork?
+ReasonWhyCheck,ReasonWhyCheck,QID17,What reason did Alex Martinez give for not getting permission from Jamie Rivera?
+TimingFamousLessFam_First Click,TimingFamousLessFam_First Click,QID57_FIRST_CLICK,Timing - First Click
+TimingFamousLessFam_Last Click,TimingFamousLessFam_Last Click,QID57_LAST_CLICK,Timing - Last Click
+TimingFamousLessFam_Page Submit,TimingFamousLessFam_Page Submit,QID57_PAGE_SUBMIT,Timing - Page Submit
+TimingFamousLessFam_Click Count,TimingFamousLessFam_Click Count,QID57_CLICK_COUNT,Timing - Click Count
+TimingLessFamFamous_First Click,TimingLessFamFamous_First Click,QID56_FIRST_CLICK,Timing - First Click
+TimingLessFamFamous_Last Click,TimingLessFamFamous_Last Click,QID56_LAST_CLICK,Timing - Last Click
+TimingLessFamFamous_Page Submit,TimingLessFamFamous_Page Submit,QID56_PAGE_SUBMIT,Timing - Page Submit
+TimingLessFamFamous_Click Count,TimingLessFamFamous_Click Count,QID56_CLICK_COUNT,Timing - Click Count
+TimingLessFamLessFam_First Click,TimingLessFamLessFam_First Click,QID55_FIRST_CLICK,Timing - First Click
+TimingLessFamLessFam_Last Click,TimingLessFamLessFam_Last Click,QID55_LAST_CLICK,Timing - Last Click
+TimingLessFamLessFam_Page Submit,TimingLessFamLessFam_Page Submit,QID55_PAGE_SUBMIT,Timing - Page Submit
+TimingLessFamLessFam_Click Count,TimingLessFamLessFam_Click Count,QID55_CLICK_COUNT,Timing - Click Count
+AllowedReason,AllowedReason,QID19,Should Alex Martinez be legally allowed to sell this collage without Jamie Rivera's permission?
+CostReason,CostReason,QID20,Martinez sold the artwork for $500 per print. How much does this affect whether the use should be legally allowed?
+ReduceMarket,ReduceMarket,QID21,Do you think Martinez's artwork would reduce the market value of Rivera's original photograph?
+Jury,Jury,QID22,"If you were on a jury, who would you rule in favor of?"
+Explain_Ruling,Explain_Ruling,QID23_TEXT,Explain your reasoning for your ruling.
+LawTiming_First Click,LawTiming_First Click,QID58_FIRST_CLICK,Timing - First Click
+LawTiming_Last Click,LawTiming_Last Click,QID58_LAST_CLICK,Timing - Last Click
+LawTiming_Page Submit,LawTiming_Page Submit,QID58_PAGE_SUBMIT,Timing - Page Submit
+LawTiming_Click Count,LawTiming_Click Count,QID58_CLICK_COUNT,Timing - Click Count
+MorallyWrong,MorallyWrong,QID24,How wrong was Martinez's action of using Rivera's photograph to create and sell this artwork?
+VictimRivera,VictimRivera,QID25,To what extent is Rivera a victim in this situation?
+ObjectKnowledge,ObjectKnowledge,QID26,Do you think Martinez was aware that Rivera might object to this use?
+Unfairness,Unfairness,QID27,How unfair was Martinez's treatment of Rivera?
+RightsViolation,RightsViolation,QID28,Did Martinez violate Rivera's rights as a photographer?
+Punishment,Punishment,QID29,"How much punishment, if any, does Martinez deserve?"
+Payment,Payment,QID30,Should Martinez have to pay Rivera for using the photograph?
+MoralTiming_First Click,MoralTiming_First Click,QID59_FIRST_CLICK,Timing - First Click
+MoralTiming_Last Click,MoralTiming_Last Click,QID59_LAST_CLICK,Timing - Last Click
+MoralTiming_Page Submit,MoralTiming_Page Submit,QID59_PAGE_SUBMIT,Timing - Page Submit
+MoralTiming_Click Count,MoralTiming_Click Count,QID59_CLICK_COUNT,Timing - Click Count
+FinancialHarm,FinancialHarm,QID33,"How much financial harm (lost income, lost opportunities) did Rivera experience?"
+ReputationHarm,ReputationHarm,QID34,How much harm was done to Rivera's reputation as a photographer?
+EmotionalDistress,EmotionalDistress,QID35,How much emotional distress do you think Rivera experienced?
+OverallHarm,OverallHarm,QID36,"In general, how much harm did Rivera suffer in this situation?"
+HarmTiming_First Click,HarmTiming_First Click,QID60_FIRST_CLICK,Timing - First Click
+HarmTiming_Last Click,HarmTiming_Last Click,QID60_LAST_CLICK,Timing - Last Click
+HarmTiming_Page Submit,HarmTiming_Page Submit,QID60_PAGE_SUBMIT,Timing - Page Submit
+HarmTiming_Click Count,HarmTiming_Click Count,QID60_CLICK_COUNT,Timing - Click Count
+StatusTiming_First Click,StatusTiming_First Click,QID61_FIRST_CLICK,Timing - First Click
+StatusTiming_Last Click,StatusTiming_Last Click,QID61_LAST_CLICK,Timing - Last Click
+StatusTiming_Page Submit,StatusTiming_Page Submit,QID61_PAGE_SUBMIT,Timing - Page Submit
+StatusTiming_Click Count,StatusTiming_Click Count,QID61_CLICK_COUNT,Timing - Click Count
+Resources,Resources,QID40,"Who had more resources (money, lawyers, connections) in this situation?"
+PowertoStop,PowertoStop,QID39,How much power did Rivera (the photographer) have to stop Martinez from using the photograph?
+ArtistStatus,Status,QID38,How much status does Martinez (the artist) have in the art world?
+CopyrightFamiliar,CopyrightFamiliar,QID52,"How familiar are you with copyright law and ""fair use""?"
+ArtTraining,ArtTraining,QID1720293460,"What is your level of formal artistic training or experience, such as painting, drawing, sculpture, ceramics, photography, and/or film-video?"
+NativeLanguage,NativeLanguage,QID1720293459_TEXT,What is your native language?
+Age,Age,QID1720293458_TEXT,What is your age?
+Gender,Gender,QID1720293457,What is your gender?
+Race,Race,QID1720293456,Choose one or more races that you consider yourself to be
+Seriousness,Seriousness,QID1720293454,Did you complete this experiment seriously throughout (without responding randomly)?
+Type,Type,Type,Type
+repeat_response,,,"1 = not this person's first exposure to a vignette (same SONA id earlier, or no SONA id and same IP within 3 hours); 0 = first exposure"

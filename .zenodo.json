@@ -1,0 +1,30 @@
+{
+  "title": "Fame, Transformation, and Lay Judgments of Fair Use: materials, de-identified data, and analysis code",
+  "upload_type": "dataset",
+  "description": "<p>Materials, de-identified data, and analysis code for two vignette experiments (UCLA undergraduates; Study 1, 2 &times; 2, N = 276 recorded; Study 2, 2 &times; 2 &times; 2, N = 599 recorded) testing whether the fame of an appropriating artist, the fame of the original photographer, and the degree of transformation affect lay judgments of fair use, moral wrongness, harm, and remedy. Code is licensed MIT; data, materials and documents are licensed CC BY 4.0 (see LICENSE-DATA). Raw exports and identifiers are not included.</p>",
+  "creators": [
+    {
+      "name": "Kamper, David G.",
+      "affiliation": "University of California, Los Angeles; University of Chicago Law School"
+    },
+    {
+      "name": "Bedell, Becca",
+      "affiliation": "University of California, Los Angeles"
+    },
+    {
+      "name": "Holyoak, Keith J.",
+      "affiliation": "University of California, Los Angeles"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "keywords": [
+    "copyright",
+    "fair use",
+    "moral judgment",
+    "legal judgment",
+    "transformation",
+    "status"
+  ]
+}
