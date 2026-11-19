@@ -213,3 +213,37 @@ def test_reliability_gate_retains_reason_codes_only_and_applies_test_check():
 def test_freeze_check_requires_frozen_config():
     with pytest.raises(RuntimeError):
         tl.freeze_check(ROOT, {"frozen": False})
+
+
+def _fake_repo(tmp_path, local_text="pid,Explain_Ruling\nS1_0001,a\n", drive_text=None):
+    root = tmp_path / "clone"
+    (root / "Analysis" / "R").mkdir(parents=True)
+    (root / "Analysis" / "R" / "config.R").write_text("")
+    (root / "Analysis" / "output" / "real").mkdir(parents=True)
+    (root / "Analysis" / "output" / "real" / "text_input.csv").write_text(local_text)
+    drive = tmp_path / "drive" / "Analysis" / "output"
+    (drive / "real").mkdir(parents=True)
+    if drive_text is not None:
+        (drive / "real" / "text_input.csv").write_text(drive_text)
+    return str(root), str(drive)
+
+
+def test_link_drive_outputs_reads_and_writes_on_drive(tmp_path):
+    t = "pid,Explain_Ruling\nS1_0001,a\n"
+    root, drive = _fake_repo(tmp_path, t, t)
+    tl.link_drive_outputs(root, drive, ["real"])
+    assert os.path.islink(os.path.join(root, "Analysis", "output", "real"))
+    d = tl.output_dir(root, "real", "embeddings")           # results land on Drive
+    open(os.path.join(d, "x.txt"), "w").write("ok")
+    assert os.path.exists(os.path.join(drive, "real", "text", "embeddings", "x.txt"))
+    tl.link_drive_outputs(root, drive, ["real"])             # a second run of the setup cell is harmless
+
+
+def test_link_drive_outputs_refuses_different_or_missing_data(tmp_path):
+    root, drive = _fake_repo(tmp_path / "a", "pid\nS1_0001\n", "pid\nS1_0002\n")
+    with pytest.raises(RuntimeError, match="differs from the committed file"):
+        tl.link_drive_outputs(root, drive, ["real"])
+    assert not os.path.islink(os.path.join(root, "Analysis", "output", "real"))
+    root, drive = _fake_repo(tmp_path / "b", "pid\nS1_0001\n", None)
+    with pytest.raises(FileNotFoundError, match="no Analysis/output/real/text_input.csv"):
+        tl.link_drive_outputs(root, drive, ["real"])

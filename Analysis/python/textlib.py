@@ -63,6 +63,35 @@ def load_text_input(root: str, mode: str) -> pd.DataFrame:
     df["Explain_Ruling"] = df["Explain_Ruling"].fillna("")
     return df
 
+
+def link_drive_outputs(root: str, drive_output: str, modes: Sequence[str]) -> None:
+    """Colab: read the data from, and write the results to, the Google Drive copy
+    of the repository. Each Analysis/output/<mode> folder of the fresh clone is
+    replaced by a link to the Drive copy's folder, after checking that the Drive
+    copy's text_input.csv is the file committed in the repository. Messages name
+    no absolute paths, so executed notebooks do not record them."""
+    import shutil
+    for mode in modes:
+        assert mode in ("real", "simulated")
+        local = os.path.join(root, "Analysis", "output", mode)
+        remote = os.path.join(drive_output, mode)
+        if os.path.islink(local):
+            if os.path.realpath(local) != os.path.realpath(remote):
+                raise RuntimeError(f"Analysis/output/{mode} already links to a different folder")
+            continue
+        theirs = os.path.join(remote, "text_input.csv")
+        if not os.path.isfile(theirs):
+            raise FileNotFoundError(f"The Drive copy has no Analysis/output/{mode}/text_input.csv; "
+                                    "copy the repository to Drive again.")
+        ours = os.path.join(local, "text_input.csv")
+        if os.path.isfile(ours) and sha256_file(ours) != sha256_file(theirs):
+            raise RuntimeError(f"Analysis/output/{mode}/text_input.csv on Drive differs from the committed file; "
+                               "copy the repository to Drive again before running.")
+        if os.path.isdir(local):
+            shutil.rmtree(local)
+        os.makedirs(os.path.dirname(local), exist_ok=True)
+        os.symlink(remote, local)
+
 # ---------------------------------------------------------------------------
 # Tokens and whole-word matching
 # ---------------------------------------------------------------------------

@@ -16,26 +16,42 @@ SETUP = r'''# --- Setup --------------------------------------------------------
 # and APIs). MODE = "real" runs on the de-identified data. Until
 # Analysis/text_frozen/text_config.json has frozen = true, real mode processes
 # only the development set (plan, Section 7.1).
+#
+# In Colab, the code is a fresh clone of the GitHub repository, so the freeze
+# check can verify the commit. The data are read from, and the results written
+# to, the copy of the repository in your Google Drive. Its folder, relative to
+# My Drive, is the Colab Secret DRIVE_FOLDER (kept out of this public file).
 MODE = "simulated"
 REPO_URL = "https://github.com/DGK-Law-and-Cognition-Lab/Moral-Authority-in-Copyright.git"
-DRIVE_REPO = "/content/drive/MyDrive/Moral-Authority-in-Copyright"   # where the repo lives on Drive in Colab
+CLONE = "/content/Moral-Authority-in-Copyright"
 
 import os, sys, json, subprocess
+assert MODE in ("simulated", "real")
 IN_COLAB = "google.colab" in sys.modules
 if IN_COLAB:
-    from google.colab import drive
+    from google.colab import drive, userdata
     drive.mount("/content/drive")
-    if not os.path.exists(DRIVE_REPO):
-        subprocess.run(["git", "clone", REPO_URL, DRIVE_REPO], check=True)
-    os.chdir(DRIVE_REPO)
+    try:
+        DRIVE_COPY = os.path.join("/content/drive/MyDrive", userdata.get("DRIVE_FOLDER").strip().strip("/"))
+    except Exception as e:
+        raise RuntimeError("Add the Colab Secret DRIVE_FOLDER (the Drive copy's folder, relative to My Drive) "
+                           "and turn on this notebook's access to it.") from e
+    if not os.path.isdir(os.path.join(DRIVE_COPY, "Analysis", "output")):
+        raise FileNotFoundError("DRIVE_FOLDER does not point to a copy of the repository (no Analysis/output there).")
+    if not os.path.exists(CLONE):
+        subprocess.run(["git", "clone", "--quiet", REPO_URL, CLONE], check=True)
+    os.chdir(CLONE)
 sys.path.insert(0, os.path.join(os.getcwd() if IN_COLAB else os.path.abspath(".."), "python"))
 sys.path.insert(0, os.path.abspath(os.path.join("Analysis", "python")))
 import textlib as tl
 ROOT = tl.repo_root()
+if IN_COLAB:
+    tl.link_drive_outputs(ROOT, os.path.join(DRIVE_COPY, "Analysis", "output"), [MODE])
 CFG = tl.load_config(ROOT)
-assert MODE in ("simulated", "real")
 SEED = CFG["seed"]
-print("Repository folder:", os.path.basename(ROOT), "| mode:", MODE, "| text config frozen:", CFG["frozen"])
+COMMIT = subprocess.run(["git", "-C", ROOT, "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
+print("Repository folder:", os.path.basename(ROOT), "| code commit:", COMMIT, "| mode:", MODE,
+      "| text config frozen:", CFG["frozen"])
 '''
 
 SELECT = r'''import numpy as np, pandas as pd
