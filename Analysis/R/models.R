@@ -152,13 +152,22 @@ confirmatory_core <- function(d2, scale = "linear") {
 
 # Reverse-scored AllowedReason split at 4-5 vs 1-3 (Section 6, checks). Logistic
 # regression; Firth's method if the ordinary fit separates.
+# The model is saturated in the 8 cells, so ordinary estimates exist only if every
+# cell has both outcomes. A cell with all 0s or all 1s (quasi-separation) can
+# converge without any warning from glm, so the cells are checked directly.
+logistic_separated <- function(dd) {
+  cells <- table(interaction(dd$a, dd$v, dd$t, drop = TRUE), factor(dd$restrict, levels = 0:1))
+  any(cells == 0)
+}
+
 logistic_term <- function(d2, term) {
   dd <- d2[stats::complete.cases(d2[, c("AllowedReason", "a", "v", "t")]), ]
   dd$restrict <- as.integer(dd$AllowedReason >= 4)
   warn <- NULL
   g <- withCallingHandlers(stats::glm(restrict ~ a * v * t, family = stats::binomial(), data = dd),
                            warning = function(w) { warn <<- conditionMessage(w); invokeRestart("muffleWarning") })
-  if (!is.null(warn) && grepl("fitted probabilities numerically 0 or 1|did not converge", warn)) {
+  if (logistic_separated(dd) ||
+      (!is.null(warn) && grepl("fitted probabilities numerically 0 or 1|did not converge", warn))) {
     f <- logistf::logistf(restrict ~ a * v * t, data = dd)
     i <- which(names(f$coefficients) == term)
     return(list(scale = "logistic (Firth)", estimate = unname(f$coefficients[i]),

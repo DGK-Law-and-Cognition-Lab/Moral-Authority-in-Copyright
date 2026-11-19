@@ -183,3 +183,20 @@ test_that("robustness checks and full tables run and have the expected shape", {
   expect_true(all(is.na(tab$ord_p[tab$outcome %in% c("Moral", "Harm")])))
   expect_equal(sum(!is.na(tab$p_holm_primary_family)), 4 * 7)
 })
+
+test_that("the 4-5 vs 1-3 logistic check switches to Firth when a cell has only one outcome", {
+  set.seed(7)
+  dd <- expand.grid(a = c(-0.5, 0.5), v = c(-0.5, 0.5), t = c(-0.5, 0.5))
+  dd <- dd[rep(seq_len(8), each = 30), ]
+  dd$AllowedReason <- sample(1:5, nrow(dd), replace = TRUE)
+  expect_false(logistic_separated(transform(dd, restrict = as.integer(AllowedReason >= 4))))
+  expect_equal(logistic_term(dd, "t")$scale, "logistic")
+  # Quasi-separation: one cell answers 4-5 throughout. glm can converge here without
+  # a warning (as in the real Study 2 data), so the cell check must catch it.
+  one <- dd$a == 0.5 & dd$v == 0.5 & dd$t == -0.5
+  dd$AllowedReason[one] <- sample(4:5, sum(one), replace = TRUE)
+  expect_true(logistic_separated(transform(dd, restrict = as.integer(AllowedReason >= 4))))
+  r <- logistic_term(dd, "t")
+  expect_equal(r$scale, "logistic (Firth)")
+  expect_true(is.finite(r$estimate) && abs(r$estimate) < 5 && r$se < 5)
+})
