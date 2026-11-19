@@ -1,0 +1,12 @@
+Real-data run of Analysis/02_ratings_analysis.Rmd (mode = real)
+Started (UTC): 2026-11-19T20:44:24Z
+Code commit: e6cad5fe6a1ef2564efb11ca8e0ebb43f8ab3aae
+Working tree clean before run: yes
+Input SHA-256:
+  2555a73159f0f2766dc583bc4cb045bda74a3c1f344fdca46cced2297c4ebb76  Data/Study1_deidentified.csv
+  e4893a4436f7285201d344ccfdae940f193f3bc124ea238747ff44a20056837f  Data/Study2_deidentified.csv
+R: R version 4.5.2 (2025-10-31)
+
+This is the second run. The first (2026-11-19T20:40:41Z, commit 112f145) found that the
+4-5 vs 1-3 logistic robustness check did not switch to Firth under quasi-separation.
+Commit e6cad5f fixes that one check; see Docs/Changes after registration.md.

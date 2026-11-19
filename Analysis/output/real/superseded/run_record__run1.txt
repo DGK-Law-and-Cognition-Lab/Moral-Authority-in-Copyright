@@ -1,0 +1,8 @@
+Real-data run of Analysis/02_ratings_analysis.Rmd (mode = real)
+Started (UTC): 2026-11-19T20:40:41Z
+Code commit: 112f1459248008a3803d921bcaa58ae9ebce672b
+Working tree clean: yes (only this record file untracked)
+Input SHA-256:
+  2555a73159f0f2766dc583bc4cb045bda74a3c1f344fdca46cced2297c4ebb76  Data/Study1_deidentified.csv
+  e4893a4436f7285201d344ccfdae940f193f3bc124ea238747ff44a20056837f  Data/Study2_deidentified.csv
+R: R version 4.5.2 (2025-10-31)

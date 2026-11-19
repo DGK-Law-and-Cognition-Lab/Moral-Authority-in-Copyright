@@ -1,0 +1,9 @@
+"cell","n","n_correct","share_correct"
+"famous/famous/high",33,33,1
+"famous/famous/low",28,28,1
+"famous/unknown/high",30,29,0.966666666666667
+"famous/unknown/low",35,35,1
+"unknown/famous/high",33,32,0.96969696969697
+"unknown/famous/low",37,36,0.972972972972973
+"unknown/unknown/high",39,38,0.974358974358974
+"unknown/unknown/low",26,26,1
