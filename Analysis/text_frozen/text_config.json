@@ -282,16 +282,22 @@
     ]
   },
   "dictionaries": {
-    "_about": "Section 7.6. Place the official files in Analysis/text_frozen/dictionaries/ and record their source and SHA-256 here before freezing.",
+    "_about": "Section 7.6. The official files are not redistributed in this repository (the MFD 2.0 OSF project states no license). textlib.dictionary_file downloads each from its url into Analysis/text_frozen/dictionaries/ (ignored by git) and checks the SHA-256 before use.",
     "mfd2": {
       "file": "dictionaries/mfd2.0.dic",
-      "source": null,
-      "sha256": null
+      "url": "https://osf.io/download/whjt2/?version=1",
+      "source": "Frimer, Boghrati, Haidt, Graham, & Dehghani, Moral Foundations Dictionary for Linguistic Analyses 2.0. OSF project https://osf.io/ezn37/, file mfd2.0.dic (version 1, 2019-12-16, 24,588 bytes)",
+      "license": "none stated on the OSF project",
+      "retrieved": "2026-11-19",
+      "sha256": "bde0d2f64579d9c6bd2dcb1f8c7aad14ea54181f94211014c54093d94942e9f3"
     },
     "emfd": {
       "file": "dictionaries/emfd_scoring.csv",
-      "source": null,
-      "sha256": null
+      "url": "https://raw.githubusercontent.com/medianeuroscience/emfdscore/5523d76c25afa65a59ca00e44efe45885499b116/emfdscore/dictionaries/emfd_scoring.csv",
+      "source": "Hopp, Fisher, Cornell, Huskey, & Weber (2021), The extended Moral Foundations Dictionary (eMFD). GitHub medianeuroscience/emfdscore, commit 5523d76, emfdscore/dictionaries/emfd_scoring.csv (572,028 bytes)",
+      "license": "GPL-3.0 (repository license)",
+      "retrieved": "2026-11-19",
+      "sha256": "d75e0ddfb3e93c7b492b2be0cbeb4b5c65c8c185575c9152069ee5246870d2e6"
     }
   },
   "seed": 2025,

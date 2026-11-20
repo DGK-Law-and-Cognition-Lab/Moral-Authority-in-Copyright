@@ -36,9 +36,11 @@ if cfg["stm"].get("K") is None:
     problems.append("stm.K (choose on the development set with 06_text_statistics.Rmd, stage = 'development')")
 for k in ("mfd2", "emfd"):
     d = cfg["dictionaries"][k]
-    p = os.path.join(fdir, d["file"])
-    ok = os.path.exists(p) and bool(d.get("source")) and d.get("sha256") == tl.sha256_file(p)
-    if not ok:
+    try:
+        p = tl.dictionary_file(root, cfg, k, download=True) if d.get("sha256") else None
+    except Exception:
+        p = None
+    if not (p and d.get("source")):
         problems.append(f"dictionaries.{k}: file present, source recorded, sha256 matching")
 if "draft" in open(os.path.join(fdir, "codebook.md"), encoding="utf-8").read().lower():
     problems.append("codebook.md still says draft (remove the draft status lines once the coders have finalized it)")

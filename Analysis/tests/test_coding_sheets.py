@@ -51,7 +51,7 @@ def _fill(path, rng, blank_item=None):
     truth = {}
     for r in range(2, ws.max_row + 1):
         item = ws.cell(row=r, column=1).value
-        codes = rng.integers(0, 2, size=12).tolist()
+        codes = rng.integers(0, 2, size=len(tl.REASON_CODES)).tolist()
         stance = tl.STANCES[int(rng.integers(0, 3))]
         for j, v in enumerate(codes):
             # half the rows as text, as Google Sheets may store them

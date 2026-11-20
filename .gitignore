@@ -25,3 +25,7 @@ Analysis/**/*.html
 Analysis/**/*_cache/
 Analysis/**/*_files/
 Analysis/simulated_run/
+
+# Moral dictionaries: downloaded from their official sources by textlib.dictionary_file, not redistributed
+Analysis/text_frozen/dictionaries/*
+!Analysis/text_frozen/dictionaries/README.md

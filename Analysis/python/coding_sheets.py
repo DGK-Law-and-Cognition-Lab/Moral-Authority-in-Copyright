@@ -50,7 +50,7 @@ def codebook_definitions(root: str):
     prompt = text.split("<!-- PROMPT START -->", 1)[1].split("<!-- PROMPT END -->", 1)[0]
     codes = re.findall(r"^\s*(\d+)\.\s+([a-z_]+):\s*(.+?)\s*$", prompt, flags=re.M)
     stances = re.findall(r"^\s*-\s+(favors_rivera|favors_martinez|mixed_or_unclear):\s*(.+?)\s*$", prompt, flags=re.M)
-    if [c[1] for c in codes] != tl.REASON_CODES or [int(c[0]) for c in codes] != list(range(1, 13)):
+    if [c[1] for c in codes] != tl.REASON_CODES or [int(c[0]) for c in codes] != list(range(1, len(tl.REASON_CODES) + 1)):
         raise ValueError("codebook.md reason codes do not match textlib.REASON_CODES (names and order)")
     if [s[0] for s in stances] != tl.STANCES:
         raise ValueError("codebook.md stances do not match textlib.STANCES")
@@ -132,7 +132,7 @@ def write_workbook(path: str, items: pd.DataFrame, texts: dict, root: str, title
         ("", False),
         ("How to code", True),
         ("1. Read each explanation in the Coding tab. Code what the explanation SAYS, not what you think about the case.", False),
-        ("2. For each of the 12 reason codes, enter 1 if the explanation clearly gives that reason and 0 if it does not. "
+        (f"2. For each of the {len(tl.REASON_CODES)} reason codes, enter 1 if the explanation clearly gives that reason and 0 if it does not. "
          "A response can have several 1s. Every cell must be filled. The definitions are in the Codebook tab and in the "
          "note on each column header.", False),
         ("3. Choose one stance: which side the explanation favors.", False),
@@ -140,7 +140,10 @@ def write_workbook(path: str, items: pd.DataFrame, texts: dict, root: str, title
         ("5. Work on your own. Do not discuss the explanations with the other coder until you have both finished and "
          "returned your files.", False),
         ("6. Do not look up the study, its conditions, or its results.", False),
-        ("7. Edit this file directly. In Google Drive, do not use 'Save as Google Sheets'.", False),
+        ("7. Code by hand. Do not use ChatGPT, Perplexity, Claude, Gemini, or any other AI tool, and do not paste "
+         "the explanations into one. Language models are coded separately and compared with your codes, so your "
+         "codes must be your own.", False),
+        ("8. Edit this file directly. In Google Drive, do not use 'Save as Google Sheets'.", False),
     ]
     for i, (t, b) in enumerate(lines, start=1):
         c = ins.cell(row=i, column=1, value=t)

@@ -121,25 +121,19 @@ q = [tl.quality_flags(t, src, CFG["copy_check_ngram"], CFG["copy_check_threshold
 for k in ("copies_vignette", "off_topic", "not_english"):
     df[f"flag_{k}"] = [x[k] for x in q]
 print(df[["flag_copies_vignette", "flag_off_topic"]].sum())'''),
-    md("## Moral dictionaries (7.6)\nMFD 2.0 (LIWC `.dic`) and eMFD (word-probability table). Place the official files where `text_config.json` says and record their source and SHA-256 before freezing. In simulated mode they are skipped if absent."),
-    code(r'''import hashlib
-dcfg = CFG["dictionaries"]
-def dict_path(key): return os.path.join(ROOT, "Analysis", "text_frozen", dcfg[key]["file"])
-have = {k: os.path.exists(dict_path(k)) for k in ("mfd2", "emfd")}
-if MODE == "real" and CFG["frozen"]:
-    for k in have:
-        assert have[k], f"missing dictionary {k}"
-        h = hashlib.sha256(open(dict_path(k), "rb").read()).hexdigest()
-        assert h == dcfg[k]["sha256"], f"{k}: file does not match the frozen SHA-256"
-if have["mfd2"]:
-    mfd = tl.read_dic(dict_path("mfd2"))
+    md("## Moral dictionaries (7.6)\nMFD 2.0 (LIWC `.dic`) and eMFD (word-probability table). The official files are not stored in the repository: in real mode each is downloaded from the source recorded in `text_config.json` and checked against its SHA-256. In simulated mode they are used only if already present."),
+    code(r'''dict_files = {k: tl.dictionary_file(ROOT, CFG, k, download=(MODE == "real")) for k in ("mfd2", "emfd")}
+if MODE == "real":
+    assert all(dict_files.values()), f"missing dictionary: {dict_files}"
+if dict_files["mfd2"]:
+    mfd = tl.read_dic(dict_files["mfd2"])
     s = pd.DataFrame([tl.dic_scores(t, mfd) for t in df.Explain_Ruling]).add_prefix("mfd2_")
     df = pd.concat([df.reset_index(drop=True), s], axis=1)
-if have["emfd"]:
-    em = pd.read_csv(dict_path("emfd"))
+if dict_files["emfd"]:
+    em = pd.read_csv(dict_files["emfd"])
     s = pd.DataFrame([tl.weighted_scores(t, em) for t in df.Explain_Ruling]).add_prefix("emfd_")
     df = pd.concat([df.reset_index(drop=True), s], axis=1)
-print("dictionaries used:", {k: v for k, v in have.items()})'''),
+print("dictionaries used:", {k: bool(v) for k, v in dict_files.items()})'''),
     md("## Words that separate conditions (7.6)\nWeighted log-odds ratios with an informative Dirichlet prior (all explanations as the prior), on the masked text, for each factor, in the test set and in all of Study 2 (and Study 1 for the fame factors)."),
     code(r'''out = tl.output_dir(ROOT, MODE)
 # Development work does not look at differences between conditions (Section 7.1):

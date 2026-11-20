@@ -288,6 +288,32 @@ def dic_scores(text: str, dic: Dict[str, List[str]]) -> Dict[str, float]:
     return res
 
 
+def dictionary_file(root: str, cfg: dict, key: str, download: bool = False) -> Optional[str]:
+    """Path of a moral dictionary named in text_config.json (dictionaries.<key>).
+    The files are not redistributed in this repository: if the file is missing and
+    download is True, it is fetched from its recorded url. A file that is present is
+    always checked against the recorded SHA-256. Returns None if the file is absent
+    and was not downloaded."""
+    d = cfg["dictionaries"][key]
+    path = os.path.join(root, "Analysis", "text_frozen", d["file"])
+    if not os.path.exists(path) and download:
+        if not d.get("url"):
+            raise RuntimeError(f"dictionaries.{key} has no url to download from")
+        import urllib.request
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        tmp = path + ".part"
+        urllib.request.urlretrieve(d["url"], tmp)
+        if d.get("sha256") and sha256_file(tmp) != d["sha256"]:
+            os.remove(tmp)
+            raise RuntimeError(f"dictionaries.{key}: the file at {d['url']} does not match the recorded SHA-256")
+        os.replace(tmp, path)
+    if not os.path.exists(path):
+        return None
+    if d.get("sha256") and sha256_file(path) != d["sha256"]:
+        raise RuntimeError(f"dictionaries.{key}: {path} does not match the SHA-256 in text_config.json")
+    return path
+
+
 def weighted_scores(text: str, table: pd.DataFrame, word_col: str = "word") -> Dict[str, float]:
     """Mean of the per-word weights over matched tokens (eMFD-style scoring);
     0 for a category when no token matches."""

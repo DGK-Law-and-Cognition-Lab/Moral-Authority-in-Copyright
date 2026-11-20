@@ -105,6 +105,34 @@ def test_dictionary_parsers(tmp_path):
     assert tl.weighted_scores("nothing here", table) == {"care_p": 0.0, "fairness_p": 0.0}
 
 
+def test_read_dic_accepts_old_mac_line_endings(tmp_path):
+    # the official MFD 2.0 file on OSF ends its lines with CR only
+    dic = tmp_path / "cr.dic"
+    dic.write_bytes(b"%\r1\tcare.virtue\r2\tfairness.vice\r%\rprotect\t1\rcheat\t2\r")
+    assert tl.read_dic(str(dic)) == {"care.virtue": ["protect"], "fairness.vice": ["cheat"]}
+
+
+def test_dictionary_file_downloads_and_checks_the_hash(tmp_path):
+    import hashlib
+    src = tmp_path / "official.dic"
+    src.write_bytes(b"%\n1\tcare.virtue\n%\nprotect\t1\n")
+    good = hashlib.sha256(src.read_bytes()).hexdigest()
+    root = tmp_path / "repo"
+    cfg = {"dictionaries": {"mfd2": {"file": "dictionaries/mfd2.0.dic", "url": src.as_uri(), "sha256": good}}}
+    assert tl.dictionary_file(str(root), cfg, "mfd2") is None              # absent, no download
+    p = tl.dictionary_file(str(root), cfg, "mfd2", download=True)
+    assert open(p, "rb").read() == src.read_bytes()
+    assert tl.dictionary_file(str(root), cfg, "mfd2") == p                  # present, hash matches
+    open(p, "ab").write(b"extra\t1\n")
+    with pytest.raises(RuntimeError, match="does not match"):
+        tl.dictionary_file(str(root), cfg, "mfd2")
+    cfg["dictionaries"]["mfd2"]["sha256"] = "0" * 64
+    other = tmp_path / "repo2"
+    with pytest.raises(RuntimeError, match="does not match"):
+        tl.dictionary_file(str(other), cfg, "mfd2", download=True)
+    assert not os.path.exists(other / "Analysis" / "text_frozen" / "dictionaries" / "mfd2.0.dic")
+
+
 def test_ddr_scores_sign():
     a = np.array([[1.0, 0.0], [0.9, 0.1]]); b = np.array([[0.0, 1.0], [0.1, 0.9]])
     docs = np.array([[1.0, 0.05], [0.05, 1.0]])
