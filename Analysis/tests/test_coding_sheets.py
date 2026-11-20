@@ -19,11 +19,38 @@ SEED = tl.load_config(ROOT)["seed"]
 
 
 def test_codebook_definitions_match_the_code_list():
-    codes, stances, story = cs.codebook_definitions(ROOT)
+    codes, stances, rules, story = cs.codebook_definitions(ROOT)
     assert [c[0] for c in codes] == tl.REASON_CODES
     assert [s[0] for s in stances] == tl.STANCES
     assert all(len(d) > 10 for _, d in codes)
+    assert len(rules) == 5 and all(len(r) > 20 for r in rules)
+    assert not any(r.split(":")[0] in tl.STANCES for r in rules)    # rules are not read as stances
     assert "Martinez" in story and "famous" not in story.lower()   # no condition information
+
+
+def test_calibration_round_two_is_new_reproducible_and_development_only():
+    key, _ = cs.draw_dev_samples(TI, SEED)
+    k2 = cs.draw_calibration_round(TI, key, SEED, 2)
+    pd.testing.assert_frame_equal(k2, cs.draw_calibration_round(TI, key, SEED, 2))
+    new = k2.iloc[len(key):]
+    assert list(new.item) == [f"P{i:02d}" for i in range(21, 41)]
+    assert {cs.calibration_round(i) for i in new.item} == {2}
+    assert not set(new.pid) & set(key.pid) and new.pid.is_unique
+    dev = TI[(TI.text_set == "dev") & TI.text_ok]
+    assert set(new.pid) <= set(dev.pid.astype(str))
+    pd.testing.assert_frame_equal(k2.iloc[:len(key)], key)            # earlier items unchanged
+    with pytest.raises(ValueError, match="next round is 3"):
+        cs.draw_calibration_round(TI, k2, SEED, 2)
+
+
+def test_rules_appear_in_the_codebook_tab(tmp_path):
+    from openpyxl import load_workbook
+    items = pd.DataFrame({"item": ["D001"], "pid": ["x1"]})
+    path = str(tmp_path / "r.xlsx")
+    cs.write_workbook(path, items, {"x1": "some text"}, ROOT, "t", "n")
+    cells = [c.value for row in load_workbook(path)["Codebook"].iter_rows() for c in row if c.value]
+    _, _, rules, _ = cs.codebook_definitions(ROOT)
+    assert all(r in cells for r in rules) and "reliance" in cells
 
 
 def test_draw_is_reproducible_proportional_and_development_only():

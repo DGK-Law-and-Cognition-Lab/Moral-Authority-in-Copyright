@@ -83,6 +83,13 @@
 "remedy","a:t",250,0.632,-0.295975086176317,-1.3762071583101,0.769733669948473,0.587143994812212,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_test",0.985345189192903
 "remedy","v:t",250,0.632,1.30788169617238,0.235261762695439,2.38141091037064,0.0170079681863223,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_test",0.170079681863223
 "remedy","a:v:t",250,0.632,1.3447978908616,-0.781852534800249,3.50973240802744,0.216024211514713,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_test",0.940377422866759
+"reliance","a",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","v",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","t",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","a:v",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","a:t",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","v:t",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
+"reliance","a:v:t",250,0,,,,,"no variation; not estimable","gptoss","study2_test",
 "permission","a",309,0.715210355987055,0.133628554865275,-0.381697166296406,0.647028867086473,0.60984499936906,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.985912293499216
 "permission","v",309,0.715210355987055,0.133768548146513,-0.377783638396502,0.650887673261686,0.608801609913034,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.985912293499216
 "permission","t",309,0.715210355987055,-0.641337210297284,-1.15971186916229,-0.131109827191056,0.0137090373724581,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.119954077009008
@@ -167,6 +174,13 @@
 "remedy","a:t",309,0.614886731391586,-0.201009844155846,-1.15156597650468,0.741068283413721,0.676342194106876,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.985912293499216
 "remedy","v:t",309,0.614886731391586,0.944656110946773,-0.00211695702587711,1.89059567074018,0.0505121555018978,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.353585088513285
 "remedy","a:v:t",309,0.614886731391586,1.32711850045675,-0.552908925019383,3.23217710943242,0.166948245087653,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study2_all",0.649243175340875
+"reliance","a",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","v",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","t",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","a:v",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","a:t",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","v:t",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
+"reliance","a:v:t",309,0,,,,,"no variation; not estimable","gptoss","study2_all",
 "permission","a",215,0.758139534883721,-0.292823562173948,-0.931329612381875,0.344806213085241,0.366458801973608,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.792770830240908
 "permission","v",215,0.758139534883721,0.71568041299401,0.0882062105314245,1.36365914231985,0.0252266438937544,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.10811418811609
 "permission","a:v",215,0.758139534883721,0.652431292464518,-0.616644154814999,1.93547139614878,0.313281166726899,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.792770830240908
@@ -203,6 +217,9 @@
 "remedy","a",215,0.595348837209302,0.247680890232519,-0.293339950654249,0.793067772898674,0.36995972077909,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.792770830240908
 "remedy","v",215,0.595348837209302,0.132946064548527,-0.409321154687426,0.677115541498615,0.630741908837251,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.976377294724961
 "remedy","a:v",215,0.595348837209302,0.185881459869656,-0.89919275881421,1.27368718003006,0.736882078203137,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gptoss","study1",0.976377294724961
+"reliance","a",215,0,,,,,"no variation; not estimable","gptoss","study1",
+"reliance","v",215,0,,,,,"no variation; not estimable","gptoss","study1",
+"reliance","a:v",215,0,,,,,"no variation; not estimable","gptoss","study1",
 "permission","a",250,0.704,0.0199765849409124,-0.540542797900542,0.578860641618625,0.944059511697974,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.985345189192903
 "permission","v",250,0.704,0.0819372960665468,-0.475941293054647,0.643443024225286,0.773392082161332,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.985345189192903
 "permission","t",250,0.704,-0.588379188812231,-1.15200746008086,-0.0327137125293631,0.0379440124252898,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.295120096641143
@@ -287,6 +304,13 @@
 "remedy","a:t",250,0.632,-0.295975086176317,-1.3762071583101,0.769733669948473,0.587143994812212,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.985345189192903
 "remedy","v:t",250,0.632,1.30788169617238,0.235261762695439,2.38141091037064,0.0170079681863223,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.170079681863223
 "remedy","a:v:t",250,0.632,1.3447978908616,-0.781852534800249,3.50973240802744,0.216024211514713,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_test",0.940377422866759
+"reliance","a",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","v",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","t",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","a:v",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","a:t",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","v:t",250,0,,,,,"no variation; not estimable","claude","study2_test",
+"reliance","a:v:t",250,0,,,,,"no variation; not estimable","claude","study2_test",
 "permission","a",309,0.715210355987055,0.133628554865275,-0.381697166296406,0.647028867086473,0.60984499936906,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.985912293499216
 "permission","v",309,0.715210355987055,0.133768548146513,-0.377783638396502,0.650887673261686,0.608801609913034,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.985912293499216
 "permission","t",309,0.715210355987055,-0.641337210297284,-1.15971186916229,-0.131109827191056,0.0137090373724581,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.119954077009008
@@ -371,6 +395,13 @@
 "remedy","a:t",309,0.614886731391586,-0.201009844155846,-1.15156597650468,0.741068283413721,0.676342194106876,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.985912293499216
 "remedy","v:t",309,0.614886731391586,0.944656110946773,-0.00211695702587711,1.89059567074018,0.0505121555018978,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.353585088513285
 "remedy","a:v:t",309,0.614886731391586,1.32711850045675,-0.552908925019383,3.23217710943242,0.166948245087653,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study2_all",0.649243175340875
+"reliance","a",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","v",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","t",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","a:v",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","a:t",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","v:t",309,0,,,,,"no variation; not estimable","claude","study2_all",
+"reliance","a:v:t",309,0,,,,,"no variation; not estimable","claude","study2_all",
 "permission","a",215,0.758139534883721,-0.292823562173948,-0.931329612381875,0.344806213085241,0.366458801973608,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.792770830240908
 "permission","v",215,0.758139534883721,0.71568041299401,0.0882062105314245,1.36365914231985,0.0252266438937544,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.10811418811609
 "permission","a:v",215,0.758139534883721,0.652431292464518,-0.616644154814999,1.93547139614878,0.313281166726899,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.792770830240908
@@ -407,6 +438,9 @@
 "remedy","a",215,0.595348837209302,0.247680890232519,-0.293339950654249,0.793067772898674,0.36995972077909,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.792770830240908
 "remedy","v",215,0.595348837209302,0.132946064548527,-0.409321154687426,0.677115541498615,0.630741908837251,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.976377294724961
 "remedy","a:v",215,0.595348837209302,0.185881459869656,-0.89919275881421,1.27368718003006,0.736882078203137,"Firth logistic; estimate = log-odds difference (codes as in config.R)","claude","study1",0.976377294724961
+"reliance","a",215,0,,,,,"no variation; not estimable","claude","study1",
+"reliance","v",215,0,,,,,"no variation; not estimable","claude","study1",
+"reliance","a:v",215,0,,,,,"no variation; not estimable","claude","study1",
 "permission","a",250,0.704,0.0199765849409124,-0.540542797900542,0.578860641618625,0.944059511697974,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.985345189192903
 "permission","v",250,0.704,0.0819372960665468,-0.475941293054647,0.643443024225286,0.773392082161332,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.985345189192903
 "permission","t",250,0.704,-0.588379188812231,-1.15200746008086,-0.0327137125293631,0.0379440124252898,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.295120096641143
@@ -491,6 +525,13 @@
 "remedy","a:t",250,0.632,-0.295975086176317,-1.3762071583101,0.769733669948473,0.587143994812212,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.985345189192903
 "remedy","v:t",250,0.632,1.30788169617238,0.235261762695439,2.38141091037064,0.0170079681863223,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.170079681863223
 "remedy","a:v:t",250,0.632,1.3447978908616,-0.781852534800249,3.50973240802744,0.216024211514713,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_test",0.940377422866759
+"reliance","a",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","v",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","t",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","a:v",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","a:t",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","v:t",250,0,,,,,"no variation; not estimable","gemini","study2_test",
+"reliance","a:v:t",250,0,,,,,"no variation; not estimable","gemini","study2_test",
 "permission","a",309,0.715210355987055,0.133628554865275,-0.381697166296406,0.647028867086473,0.60984499936906,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.985912293499216
 "permission","v",309,0.715210355987055,0.133768548146513,-0.377783638396502,0.650887673261686,0.608801609913034,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.985912293499216
 "permission","t",309,0.715210355987055,-0.641337210297284,-1.15971186916229,-0.131109827191056,0.0137090373724581,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.119954077009008
@@ -575,6 +616,13 @@
 "remedy","a:t",309,0.614886731391586,-0.201009844155846,-1.15156597650468,0.741068283413721,0.676342194106876,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.985912293499216
 "remedy","v:t",309,0.614886731391586,0.944656110946773,-0.00211695702587711,1.89059567074018,0.0505121555018978,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.353585088513285
 "remedy","a:v:t",309,0.614886731391586,1.32711850045675,-0.552908925019383,3.23217710943242,0.166948245087653,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study2_all",0.649243175340875
+"reliance","a",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","v",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","t",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","a:v",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","a:t",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","v:t",309,0,,,,,"no variation; not estimable","gemini","study2_all",
+"reliance","a:v:t",309,0,,,,,"no variation; not estimable","gemini","study2_all",
 "permission","a",215,0.758139534883721,-0.292823562173948,-0.931329612381875,0.344806213085241,0.366458801973608,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.792770830240908
 "permission","v",215,0.758139534883721,0.71568041299401,0.0882062105314245,1.36365914231985,0.0252266438937544,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.10811418811609
 "permission","a:v",215,0.758139534883721,0.652431292464518,-0.616644154814999,1.93547139614878,0.313281166726899,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.792770830240908
@@ -611,3 +659,6 @@
 "remedy","a",215,0.595348837209302,0.247680890232519,-0.293339950654249,0.793067772898674,0.36995972077909,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.792770830240908
 "remedy","v",215,0.595348837209302,0.132946064548527,-0.409321154687426,0.677115541498615,0.630741908837251,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.976377294724961
 "remedy","a:v",215,0.595348837209302,0.185881459869656,-0.89919275881421,1.27368718003006,0.736882078203137,"Firth logistic; estimate = log-odds difference (codes as in config.R)","gemini","study1",0.976377294724961
+"reliance","a",215,0,,,,,"no variation; not estimable","gemini","study1",
+"reliance","v",215,0,,,,,"no variation; not estimable","gemini","study1",
+"reliance","a:v",215,0,,,,,"no variation; not estimable","gemini","study1",

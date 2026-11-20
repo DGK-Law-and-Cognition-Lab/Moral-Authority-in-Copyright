@@ -11,7 +11,8 @@
     "fame_status_power",
     "fairness_moral",
     "law_rules",
-    "remedy"
+    "remedy",
+    "reliance"
   ],
   "dev_gate_applied": false,
   "test_gate_applied": false,

@@ -11,6 +11,7 @@ gptoss,claude,fame_status_power,545,1.0
 gptoss,claude,fairness_moral,545,1.0
 gptoss,claude,law_rules,545,1.0
 gptoss,claude,remedy,545,1.0
+gptoss,claude,reliance,545,
 gptoss,claude,stance,545,1.0
 gptoss,gemini,permission,545,1.0
 gptoss,gemini,transformation,545,1.0
@@ -24,6 +25,7 @@ gptoss,gemini,fame_status_power,545,1.0
 gptoss,gemini,fairness_moral,545,1.0
 gptoss,gemini,law_rules,545,1.0
 gptoss,gemini,remedy,545,1.0
+gptoss,gemini,reliance,545,
 gptoss,gemini,stance,545,1.0
 claude,gemini,permission,545,1.0
 claude,gemini,transformation,545,1.0
@@ -37,4 +39,5 @@ claude,gemini,fame_status_power,545,1.0
 claude,gemini,fairness_moral,545,1.0
 claude,gemini,law_rules,545,1.0
 claude,gemini,remedy,545,1.0
+claude,gemini,reliance,545,
 claude,gemini,stance,545,1.0

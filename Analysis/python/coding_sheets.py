@@ -11,15 +11,20 @@ Run from the repository root.
           used only to refine the codebook before the independent coding.
       Responses under three words are set aside, as in every text analysis.
 
+  python3 Analysis/python/coding_sheets.py draw-calibration ROUND
+      Adds a further calibration round (ROUND = 2, 3, ...) of 20 development
+      responses not yet in the key (P21-P40 for round 2, and so on), drawn
+      reproducibly, and appends them to the key.
+
   python3 Analysis/python/coding_sheets.py sheets-dev OUTDIR
-      Writes the workbooks to OUTDIR: one calibration workbook and one workbook
-      per coder (A, B) for the 200 items. Conditions are never shown. The code
+      Writes the workbooks to OUTDIR: one calibration workbook per round and one
+      workbook per coder (A, B) for the 200 items. Conditions are never shown. The code
       definitions are read from codebook.md, so coders and language models see
       the same wording. Rerun after the codebook changes; the items stay fixed.
 
   python3 Analysis/python/coding_sheets.py import-dev SHEET_A SHEET_B [CONSENSUS]
       Reads the returned workbooks and writes human_codes_dev.csv (pid, coder,
-      the 12 codes as 0/1, stance) and, if given, human_codes_dev_consensus.csv,
+      the reason codes as 0/1, stance) and, if given, human_codes_dev_consensus.csv,
       and prints Cohen's kappa between the coders for each field.
 """
 import argparse
@@ -44,8 +49,9 @@ CODE_VALUES = {"1": 1, "0": 0, "1.0": 1, "0.0": 0, "true": 1, "false": 0}
 # ---------------------------------------------------------------------------
 
 def codebook_definitions(root: str):
-    """The 12 reason codes and 3 stances, in order, with their definitions, as
-    written between the PROMPT markers of codebook.md."""
+    """The reason codes and stances, in order, with their definitions, the rules
+    for hard cases, and the story, as written between the PROMPT markers of
+    codebook.md."""
     text = open(os.path.join(root, "Analysis", "text_frozen", "codebook.md"), encoding="utf-8").read()
     prompt = text.split("<!-- PROMPT START -->", 1)[1].split("<!-- PROMPT END -->", 1)[0]
     codes = re.findall(r"^\s*(\d+)\.\s+([a-z_]+):\s*(.+?)\s*$", prompt, flags=re.M)
@@ -54,9 +60,11 @@ def codebook_definitions(root: str):
         raise ValueError("codebook.md reason codes do not match textlib.REASON_CODES (names and order)")
     if [s[0] for s in stances] != tl.STANCES:
         raise ValueError("codebook.md stances do not match textlib.STANCES")
+    m = re.search(r"^Rules for hard cases:[ \t]*\n((?:[ \t]*-[ \t]+.+\n?)+)", prompt, flags=re.M)
+    rules = [re.sub(r"^\s*-\s+", "", ln).strip() for ln in m.group(1).strip().splitlines()] if m else []
     story = prompt.strip().split("\n\n", 1)[0]
     story = story.replace("You will read one participant's answer", "Each row is one participant's answer")
-    return [(c[1], c[2]) for c in codes], stances, story
+    return [(c[1], c[2]) for c in codes], stances, rules, story
 
 
 # ---------------------------------------------------------------------------
@@ -101,6 +109,32 @@ def draw_dev_samples(text_input: pd.DataFrame, seed: int, n: int = N_DEV_SAMPLE,
     return pd.concat([sample, cal], ignore_index=True), alloc
 
 
+def calibration_round(item: str) -> int:
+    """P01-P20 are round 1, P21-P40 round 2, and so on."""
+    return (int(item[1:]) - 1) // N_CALIBRATION + 1
+
+
+def draw_calibration_round(text_input: pd.DataFrame, key: pd.DataFrame, seed: int, rnd: int,
+                           n: int = N_CALIBRATION) -> pd.DataFrame:
+    """Append calibration round `rnd`: n development responses not yet in the key,
+    drawn with a generator seeded by (seed, rnd)."""
+    cal = key[key["item"].str.startswith("P")]
+    have = sorted({calibration_round(i) for i in cal["item"]})
+    if have != list(range(1, len(have) + 1)) or rnd != len(have) + 1:
+        raise ValueError(f"the key has calibration rounds {have}; the next round is {len(have) + 1}")
+    used = set(key["pid"].astype(str))
+    dev = text_input[(text_input["text_set"] == "dev") & text_input["text_ok"]
+                     & ~text_input["pid"].astype(str).isin(used)].copy()
+    dev = dev.sort_values("pid", kind="mergesort").reset_index(drop=True)
+    rng = np.random.Generator(np.random.PCG64([seed, rnd]))
+    idx = rng.choice(len(dev), size=n, replace=False)
+    start = len(cal) + 1
+    new = pd.DataFrame({"item": [f"P{i:02d}" for i in range(start, start + n)],
+                        "pid": dev.loc[idx, "pid"].astype(str).to_numpy(),
+                        "purpose": f"calibration round {rnd} (codebook refinement only)"})
+    return pd.concat([key, new], ignore_index=True)
+
+
 # ---------------------------------------------------------------------------
 # Workbooks
 # ---------------------------------------------------------------------------
@@ -116,7 +150,7 @@ def write_workbook(path: str, items: pd.DataFrame, texts: dict, root: str, title
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.worksheet.datavalidation import DataValidation
 
-    codes, stances, story = codebook_definitions(root)
+    codes, stances, rules, story = codebook_definitions(root)
     wb = Workbook()
     bold = Font(bold=True)
     wrap = Alignment(wrap_text=True, vertical="top")
@@ -133,8 +167,8 @@ def write_workbook(path: str, items: pd.DataFrame, texts: dict, root: str, title
         ("How to code", True),
         ("1. Read each explanation in the Coding tab. Code what the explanation SAYS, not what you think about the case.", False),
         (f"2. For each of the {len(tl.REASON_CODES)} reason codes, enter 1 if the explanation clearly gives that reason and 0 if it does not. "
-         "A response can have several 1s. Every cell must be filled. The definitions are in the Codebook tab and in the "
-         "note on each column header.", False),
+         "A response can have several 1s. Every cell must be filled. The definitions and the rules for hard cases are "
+         "in the Codebook tab; each column header also has its definition as a note.", False),
         ("3. Choose one stance: which side the explanation favors.", False),
         ("4. Use the Notes column for anything unclear, or a reason that fits no code.", False),
         ("5. Work on your own. Do not discuss the explanations with the other coder until you have both finished and "
@@ -156,6 +190,12 @@ def write_workbook(path: str, items: pd.DataFrame, texts: dict, root: str, title
     cb.append(["Column", "Code", "Definition"])
     for i, (name, d) in enumerate(codes, start=1):
         cb.append([name, i, d])
+    if rules:
+        cb.append([])
+        cb.append(["Rules for hard cases", "", ""])
+        cb.cell(row=cb.max_row, column=1).font = bold
+        for i, r in enumerate(rules, start=1):
+            cb.append(["", f"rule {i}", r])
     cb.append([])
     cb.append(["stance", "", "Which side the explanation favors:"])
     for name, d in stances:
@@ -263,7 +303,7 @@ def to_pids(codes: pd.DataFrame, key: pd.DataFrame, expected_items) -> pd.DataFr
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("command", choices=["draw-dev", "sheets-dev", "import-dev"])
+    p.add_argument("command", choices=["draw-dev", "draw-calibration", "sheets-dev", "import-dev"])
     p.add_argument("paths", nargs="*")
     p.add_argument("--mode", default="real", choices=["real", "simulated"])
     p.add_argument("--root", default=None)
@@ -289,6 +329,16 @@ def main(argv=None):
     key = pd.read_csv(key_path, dtype=str)
     texts = dict(zip(ti["pid"].astype(str), ti["Explain_Ruling"]))
 
+    if a.command == "draw-calibration":
+        if len(a.paths) != 1 or not a.paths[0].isdigit():
+            sys.exit("usage: draw-calibration ROUND")
+        key = draw_calibration_round(ti, key, tl.load_config(root)["seed"], int(a.paths[0]))
+        key.to_csv(key_path, index=False)
+        new = key[key["purpose"].str.startswith(f"calibration round {a.paths[0]} ")]
+        print(f"Added calibration round {a.paths[0]} to {os.path.relpath(key_path, root)}: "
+              f"{new['item'].iloc[0]}-{new['item'].iloc[-1]}.")
+        return
+
     if a.command == "sheets-dev":
         if len(a.paths) != 1:
             sys.exit("usage: sheets-dev OUTDIR")
@@ -296,18 +346,22 @@ def main(argv=None):
         os.makedirs(out, exist_ok=True)
         cal = key[key["item"].str.startswith("P")]
         dev = key[key["item"].str.startswith("D")]
-        files = {
-            os.path.join(out, "Calibration (share with both coders)", "Calibration - 20 practice explanations.xlsx"):
-                (cal, "Calibration: 20 practice explanations",
-                 "Code these together or separately, then discuss them with the other coder and agree on any changes "
-                 "to the codebook. These 20 are not used in any result."),
+        files = {}
+        for rnd, items in cal.groupby(cal["item"].map(calibration_round)):
+            name = (f"Calibration - {len(items)} practice explanations.xlsx" if rnd == 1 else
+                    f"Calibration round {rnd} - {len(items)} practice explanations.xlsx")
+            files[os.path.join(out, "Calibration (share with both coders)", name)] = (
+                items, f"Calibration{'' if rnd == 1 else f' round {rnd}'}: {len(items)} practice explanations",
+                "Code these on your own first, then compare with the other coder and discuss any differences and any "
+                "changes to the codebook. These practice items are not used in any result.")
+        files.update({
             os.path.join(out, "Coder A (share with Coder A only)", "Coder A - 200 explanations.xlsx"):
                 (dev, "Independent coding: 200 explanations (Coder A)",
                  "Start after the calibration round and any codebook changes. Code all 200 on your own."),
             os.path.join(out, "Coder B (share with Coder B only)", "Coder B - 200 explanations.xlsx"):
                 (dev, "Independent coding: 200 explanations (Coder B)",
                  "Start after the calibration round and any codebook changes. Code all 200 on your own."),
-        }
+        })
         for path, (items, title, note) in files.items():
             os.makedirs(os.path.dirname(path), exist_ok=True)
             write_workbook(path, items, texts, root, title, note)

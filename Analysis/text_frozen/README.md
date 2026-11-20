@@ -7,8 +7,8 @@ The registered plan (Section 7.1) requires every tunable text-analysis choice to
 | `text_config.json` | masking list; uptake, word, and party-mention lists; model IDs and pinned revisions; number of STM topics; dictionary files and their SHA-256 |
 | `codebook.md` | the reason codes, stance, and sentiment definitions (the prompt text for every language-model coder, and the definitions on the human coders' sheets) |
 | `anchors.json` | anchor sentences for the semantic axes |
-| `coding_sample_dev.csv` | the human-coding items: 200 development responses for independent coding (`D001`-`D200`, stratified by study and condition cell) and 20 other development responses for calibration (`P01`-`P20`). Drawn once with `coding_sheets.py draw-dev` |
-| `human_codes_dev.csv` | the two human coders' independent codes for the 200 (`pid, coder`, the 12 codes as 0/1, `stance`) |
+| `coding_sample_dev.csv` | the human-coding items: 200 development responses for independent coding (`D001`-`D200`, stratified by study and condition cell) and other development responses for calibration (`P01`-`P20`, round 1; `P21`-`P40`, round 2). Drawn with `coding_sheets.py draw-dev` and `draw-calibration` |
+| `human_codes_dev.csv` | the two human coders' independent codes for the 200 (`pid, coder`, the reason codes as 0/1, `stance`) |
 | `human_codes_dev_consensus.csv` | the same 200 after the coders resolve disagreements (`pid`, codes, `stance`) |
 | `human_codes_test.csv` | one coder's codes for a random 100 test responses, made after the freeze (`pid`, codes, `stance`) |
 | `dictionaries/` | the official MFD 2.0 (`.dic`, OSF) and eMFD (`.csv`, GitHub) files. They are not stored in the repository: `textlib.dictionary_file` downloads each from the source recorded in `text_config.json` and checks its SHA-256 (recorded 19 Nov 2026) |
@@ -16,7 +16,7 @@ The registered plan (Section 7.1) requires every tunable text-analysis choice to
 ## Order
 
 1. **Coding sheets.** `python3 Analysis/python/coding_sheets.py sheets-dev OUTDIR` writes a calibration workbook (20 items, both coders) and one workbook per coder (the 200 items). Conditions are never shown; the definitions come from `codebook.md`.
-2. **Calibration.** The coders code the 20 calibration items, discuss them, and agree on any changes to the definitions in `codebook.md`. Then rerun step 1 so the 200-item sheets show the final codebook (the items do not change).
+2. **Calibration.** The coders code the 20 calibration items, discuss them, and agree on any changes to the definitions in `codebook.md`. Then rerun step 1 so the 200-item sheets show the final codebook (the items do not change). For more practice, `coding_sheets.py draw-calibration N` adds round N of 20 new development responses. Round 1 led to codebook revision 1 (a 13th code, *reliance*, and rules for hard cases; `Docs/Changes after registration.md`, entry 2); round 2 lets the coders practice with it.
 3. **Independent coding.** Each coder codes the 200 alone. `coding_sheets.py import-dev SHEET_A SHEET_B` writes `human_codes_dev.csv` and reports kappa before any discussion. The coders then resolve disagreements in a consensus workbook, imported with the third argument to `import-dev`.
 4. **Other development choices** (alongside steps 2 and 3): settle the masking, uptake, word, and party lists from development-set word frequencies; settle the anchors; choose the number of STM topics (`06_text_statistics.Rmd`, `stage = "development"`: held-out likelihood, semantic coherence, exclusivity); pin the model revisions; set the Gemini model ID; record whether the primary coder is `gpt-oss-120b` or, if no 80 GB GPU is available, `gpt-oss-20b`.
 5. **Commit the codebook and model settings** before any language-model coding (plan, Section 7.5).

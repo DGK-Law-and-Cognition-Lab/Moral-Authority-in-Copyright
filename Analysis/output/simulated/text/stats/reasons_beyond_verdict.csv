@@ -83,3 +83,10 @@
 "remedy","a:t",309,0.614886731391586,-0.350953516024591,-1.33089620978242,0.615789194754454,0.477889500756654,"Firth logistic; estimate = log-odds difference (codes as in config.R)",0.999181083368402
 "remedy","v:t",309,0.614886731391586,0.961764563029177,-0.000380680947275268,1.92453496686888,0.0500903516789324,"Firth logistic; estimate = log-odds difference (codes as in config.R)",0.438290577190658
 "remedy","a:v:t",309,0.614886731391586,1.08750243687406,-0.841881136116215,3.03598025899143,0.269659426771931,"Firth logistic; estimate = log-odds difference (codes as in config.R)",0.947555907678727
+"reliance","a",309,0,,,,,"no variation; not estimable",
+"reliance","v",309,0,,,,,"no variation; not estimable",
+"reliance","t",309,0,,,,,"no variation; not estimable",
+"reliance","a:v",309,0,,,,,"no variation; not estimable",
+"reliance","a:t",309,0,,,,,"no variation; not estimable",
+"reliance","v:t",309,0,,,,,"no variation; not estimable",
+"reliance","a:v:t",309,0,,,,,"no variation; not estimable",

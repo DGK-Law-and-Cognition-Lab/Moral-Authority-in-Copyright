@@ -439,7 +439,8 @@ def topic_stability(assignments: List[np.ndarray]) -> Dict[str, float]:
 # ---------------------------------------------------------------------------
 
 REASON_CODES = ["permission", "transformation", "nature_of_work", "amount_used", "market_effect", "profit",
-                "credit", "nonmonetary_harm", "fame_status_power", "fairness_moral", "law_rules", "remedy"]
+                "credit", "nonmonetary_harm", "fame_status_power", "fairness_moral", "law_rules", "remedy",
+                "reliance"]
 STANCES = ["favors_rivera", "favors_martinez", "mixed_or_unclear"]
 SENTIMENTS = ["negative", "neutral", "positive", "not_mentioned"]
 
@@ -467,7 +468,7 @@ def codebook_prompt(root: str) -> str:
 
 def build_prompt(codebook: str, explanation: str) -> str:
     keys = ", ".join(f'"{k}"' for k in CODING_SCHEMA["required"])
-    return (f"{codebook}\n\nReturn a JSON object with exactly these keys: {keys}. The twelve reason codes are "
+    return (f"{codebook}\n\nReturn a JSON object with exactly these keys: {keys}. The {len(REASON_CODES)} reason codes are "
             f"true or false; stance is one of {STANCES}; each sentiment is one of {SENTIMENTS}.\n\n"
             f"Explanation:\n<<<\n{explanation}\n>>>")
 
@@ -540,6 +541,7 @@ def simulated_coder(explanation: str) -> dict:
         "fairness_moral": has("wrong", "unfair", "fair", "stealing"),
         "law_rules": has("law", "legal", "fair use", "copyright"),
         "remedy": has("should pay", "give credit", "share the profits", "should have been asked"),
+        "reliance": has("foundation", "without it", "hard work", "based on", "relied"),
     }
     out["stance"] = ("favors_rivera" if has("permission", "wrong", "owns") else
                      "favors_martinez" if has("transformative", "creativity", "builds on") else "mixed_or_unclear")

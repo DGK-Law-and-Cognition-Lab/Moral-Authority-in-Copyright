@@ -30,7 +30,8 @@ if (params$mode == "real" && params$stage == "test") {
   if (length(dirty)) stop("Analysis/text_frozen has uncommitted changes; commit the frozen configuration first.")
 }
 REASON_CODES <- c("permission", "transformation", "nature_of_work", "amount_used", "market_effect", "profit",
-                  "credit", "nonmonetary_harm", "fame_status_power", "fairness_moral", "law_rules", "remedy")
+                  "credit", "nonmonetary_harm", "fame_status_power", "fairness_moral", "law_rules", "remedy",
+                  "reliance")
 LEGAL_ITEMS <- c("AllowedReason", "Jury", "CostReason", "ReduceMarket")   # the four legal ratings (Section 3)
 set.seed(SEED)
 base <- file.path(root, "Analysis", "output", params$mode)

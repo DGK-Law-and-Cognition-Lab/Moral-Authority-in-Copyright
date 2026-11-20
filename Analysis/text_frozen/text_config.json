@@ -325,8 +325,8 @@
   },
   "human_coding_files": {
     "_about": "Section 7.5. Placed in Analysis/text_frozen/ (they contain only de-identified text ids and codes).",
-    "dev_independent": "human_codes_dev.csv (pid, coder, the 12 codes as 0/1, stance)",
-    "dev_consensus": "human_codes_dev_consensus.csv (pid, the 12 codes, stance), resolved by discussion",
-    "test_check": "human_codes_test.csv (pid, the 12 codes, stance), one coder, 100 random test responses"
+    "dev_independent": "human_codes_dev.csv (pid, coder, the reason codes as 0/1, stance)",
+    "dev_consensus": "human_codes_dev_consensus.csv (pid, the reason codes, stance), resolved by discussion",
+    "test_check": "human_codes_test.csv (pid, the reason codes, stance), one coder, 100 random test responses"
   }
 }
